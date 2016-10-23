@@ -2,60 +2,184 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.1.1\jars\classes.jar"
+        is-multidex="false"
+        jar="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
         jumboMode="false"
-        revision="24.0.1"
-        sha1="c936c1bd42f0c018c18920c7bec619ef056b24f8">
-        <dex dex="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-24.1.1_ae688da82034125c2545d0d9408869543533ed8f.jar" />
+        optimize="true"
+        revision="24.0.3"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-24.2.1_aa60e2251fcb2b09d661c4a4552bac51abd52445.jar" />
     </item>
     <item
-        jar="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\jars\classes.jar"
+        is-multidex="false"
+        jar="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="false"
-        revision="24.0.1"
-        sha1="6d7d803871e3203465f71a163e7af104f807b446">
-        <dex dex="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.1.1_4db5377eb246029cddb67a7416c94efef7969716.jar" />
+        optimize="true"
+        revision="24.0.3"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_7286a58738dbd458ec37091ec15269176e800ff3.jar" />
     </item>
     <item
-        jar="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\exploded-aar\com.android.support\design\24.1.1\jars\classes.jar"
+        is-multidex="false"
+        jar="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
         jumboMode="false"
-        revision="24.0.1"
-        sha1="e195bd694d5389acfba27ff4fdfa64c4c65b2c05">
-        <dex dex="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\pre-dexed\debug\com.android.support-design-24.1.1_4ca55aba9610613d6de60d7577050de797cc4c21.jar" />
+        optimize="true"
+        revision="24.0.3"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-24.2.1_61561d4090f8fa195ab19cb1e709d3f65f9f0ba1.jar" />
     </item>
     <item
-        jar="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.1.1\jars\classes.jar"
+        is-multidex="false"
+        jar="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\jars\classes.jar"
         jumboMode="false"
-        revision="24.0.1"
-        sha1="f62e763609f65e47dc6c498760a4accf02776788">
-        <dex dex="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-24.1.1_68b7e9114ff87ec3fed1d08b105e4c39c4968475.jar" />
+        optimize="true"
+        revision="24.0.3"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\pre-dexed\debug\com.android.support-design-24.2.1_86c74755acfef6864e88d852d6666c9184703c23.jar" />
     </item>
     <item
-        jar="C:\Users\HiepNN\.gradle\caches\modules-2\files-2.1\com.android.support\support-annotations\24.1.1\3af19f153122737b372622fa6c81dd11a1c6b999\support-annotations-24.1.1.jar"
+        is-multidex="false"
+        jar="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
         jumboMode="false"
-        revision="24.0.1"
-        sha1="3af19f153122737b372622fa6c81dd11a1c6b999">
-        <dex dex="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\pre-dexed\debug\support-annotations-24.1.1_404ac0ec06725482c91a9fb1840696f1f3dd7c20.jar" />
+        optimize="true"
+        revision="24.0.3"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-24.2.1_47559a7acf53938eef2c7c9862261d6c9030f41e.jar" />
     </item>
     <item
-        jar="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\jars\libs\internal_impl-24.1.1.jar"
+        is-multidex="false"
+        jar="C:\Users\HiepNN\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
         jumboMode="false"
-        revision="24.0.1"
-        sha1="f78c2f395cb096f9dc1dc07e729922b8fcd3c4f5">
-        <dex dex="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\pre-dexed\debug\internal_impl-24.1.1_aee4daa3f49307f151f59258d83c41b764137ea5.jar" />
+        optimize="true"
+        revision="24.0.3"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\pre-dexed\debug\support-annotations-24.2.1_78f117c9aa0323184ed99d4ec7cbd493abb46b7c.jar" />
     </item>
     <item
-        jar="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.1.1\jars\classes.jar"
+        is-multidex="false"
+        jar="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
         jumboMode="false"
-        revision="24.0.1"
-        sha1="1256c10604bb098490eab070d76754ac5ceab35c">
-        <dex dex="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-24.1.1_9a14fd31423ef13e0cfb6e97ef45e1c848148937.jar" />
+        optimize="true"
+        revision="24.0.3"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-24.2.1_0e4de4570a353710241234911fcd0e04f15bf52c.jar" />
     </item>
     <item
-        jar="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.1.1\jars\classes.jar"
+        is-multidex="false"
+        jar="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
         jumboMode="false"
-        revision="24.0.1"
-        sha1="787871951412550519b0222aba3c9df4cea49875">
-        <dex dex="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-24.1.1_ec7da5063cac0f8106c7057e85a4bdf690a40b01.jar" />
+        optimize="true"
+        revision="24.0.3"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-24.2.1_2332405df3af7edff41cf1aea090793350db80b5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.2.1_07713dcbcf476d644eae4d1589c6f85ac241110b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-24.2.1_9b8be1ab61d8b7ef7ae23521c80d1d36caa4aa16.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-24.2.1_aad324cccdce7aaa620e93a0dd2d987f04b25953.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_e4cd3e486c5dcb84874b95bfa22f31f92cfcb315.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\HiepNN\.gradle\caches\modules-2\files-2.1\org.greenrobot\eventbus\3.0.0\ddd99896e9569eaababbe81b35d80e1b91c4ad85\eventbus-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="ddd99896e9569eaababbe81b35d80e1b91c4ad85">
+        <dex dex="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\pre-dexed\debug\eventbus-3.0.0_9b5c55a93116754d77f14737258bb56b5d9db558.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-24.2.1_86e393813c1b880fc332544a8e812e89cbc5c6bb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_0520acbdad11955ff7a39caecb0ee7f26ec622a2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_d3617e8471a30c63be61f261831519fb1da9f83a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\HiepNN\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.7.0\9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4\glide-3.7.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\pre-dexed\debug\glide-3.7.0_86c27c9da24d6d425572b87d7e2fac966add2d64.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-24.2.1_67c6abf41a8997d76add6e96cd205e21ac600bac.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\HiepNN\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.4\695b63d702f505b9b916e02272e3b6381bade7f\gson-2.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
+        <dex dex="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\pre-dexed\debug\gson-2.4_b79be5dd7b3092825e00f1d4f1350c767c8ee5c4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="C:\Users\HiepNN\StudioProjects\DemoApp\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_a2c297036c785a2e41d35d9bd810d6fe3cde4cd2.jar" />
     </item>
 
 </items>
