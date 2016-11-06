@@ -1,16 +1,10 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.hiepnn.mydemoapplication.fragments.FirstFragment"
     tools:showIn="@layout/activity_main">
-
-    <ImageView
-        android:id="@+id/imgBackground"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitXY"
-        android:src="@drawable/background" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -26,5 +20,13 @@
             android:layout_height="wrap_content"
             android:text="The first fragment" />
 
+        <com.example.hiepnn.mydemoapplication.view.FlowLayout
+            android:id="@+id/flow_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            app:paddingEnd="10dp"
+            app:paddingStart="10dp"
+            app:theme="@style/AppTheme.MyTheme" />
     </RelativeLayout>
 </FrameLayout>
