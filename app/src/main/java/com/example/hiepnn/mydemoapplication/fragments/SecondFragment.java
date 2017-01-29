@@ -1,25 +1,25 @@
 package com.example.hiepnn.mydemoapplication.fragments;
 
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hiepnn.mydemoapplication.R;
-import com.example.hiepnn.mydemoapplication.activities.MainActivity;
+import com.example.hiepnn.mydemoapplication.databinding.FragmentSecondBinding;
 
 public class SecondFragment extends Fragment {
-    private ImageView imgBackground;
-    private Toolbar toolbar;
+    FragmentSecondBinding fragmentSecondBinding;
 
     public SecondFragment() {
     }
@@ -27,22 +27,27 @@ public class SecondFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_second, container, false);
-        imgBackground = (ImageView) root.findViewById(R.id.imgBackground);
-        final MainActivity act = (MainActivity) getActivity();
-        if (act.getSupportActionBar() != null) {
-            toolbar = (Toolbar) act.findViewById(R.id.toolbar);
-            toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_back));
-            toolbar.setTitle("Fragment Second");
-            toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+        fragmentSecondBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_second, container, false);
+        View view = fragmentSecondBinding.getRoot();
+        fragmentSecondBinding.toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_back));
+        if (fragmentSecondBinding.toolbarTitle instanceof TextView)
+            fragmentSecondBinding.toolbarTitle.setText("Fragment Second");
+        if (fragmentSecondBinding.imgbtnAdd instanceof ImageButton) {
+            fragmentSecondBinding.imgbtnAdd.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View view) {
-                    popBackStack();
+                public void onClick(View v) {
+                    Log.e("onClick", "Add");
                 }
             });
         }
+        fragmentSecondBinding.toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                popBackStack();
+            }
+        });
         setHasOptionsMenu(true);
-        return root;
+        return view;
     }
 
     public void popBackStack() {
