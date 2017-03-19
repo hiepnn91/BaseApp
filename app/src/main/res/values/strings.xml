@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">MyBaseApp</string>
     <string name="action_settings">Settings</string>
+    <string name="dialog_btn_close">Close</string>
+    <string name="apierror">API error</string>
+    <string name="pleaseinputdata">Please input data</string>
+    <string name="dialog_error_api">Đã xảy ra lỗi. Vui lòng thử lại từ thời gian sau đó.</string>
+    <string name="dialog_error_timeout">センターへの接続が失敗しました。\nしばらく経ってからもう1度お試しください。</string>
+    <string name="dialog_error_no_connection">ネットワークに接続できません。もう一度ご確認ください。</string>
 </resources>

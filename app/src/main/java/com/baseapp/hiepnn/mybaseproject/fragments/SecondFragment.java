@@ -18,36 +18,28 @@ import android.widget.Toast;
 import com.baseapp.hiepnn.mybaseproject.R;
 import com.baseapp.hiepnn.mybaseproject.databinding.FragmentSecondBinding;
 
-public class SecondFragment extends Fragment {
-    FragmentSecondBinding fragmentSecondBinding;
-
+public class SecondFragment extends BaseFragment {
     public SecondFragment() {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        fragmentSecondBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_second, container, false);
-        View view = fragmentSecondBinding.getRoot();
-        fragmentSecondBinding.toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_back));
-        if (fragmentSecondBinding.toolbarTitle instanceof TextView)
-            fragmentSecondBinding.toolbarTitle.setText("Fragment Second");
-        if (fragmentSecondBinding.imgbtnAdd instanceof ImageButton) {
-            fragmentSecondBinding.imgbtnAdd.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Log.e("onClick", "Add");
-                }
-            });
-        }
-        fragmentSecondBinding.toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                popBackStack();
-            }
-        });
+    protected int getLayoutId() {
+        return R.layout.fragment_second;
+    }
+
+    @Override
+    protected void initView(View root, LayoutInflater inflater, ViewGroup container) {
         setHasOptionsMenu(true);
-        return view;
+    }
+
+    @Override
+    protected void getArgument(Bundle bundle) {
+
+    }
+
+    @Override
+    protected void initData() {
+
     }
 
     public void popBackStack() {

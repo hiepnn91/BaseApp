@@ -9,13 +9,16 @@ import com.baseapp.hiepnn.mybaseproject.R;
 import com.baseapp.hiepnn.mybaseproject.fragments.FirstFragment;
 import com.baseapp.hiepnn.mybaseproject.utils.FragmentUtil;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     public FloatingActionButton fab;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public int setContentViewId() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    public void initView() {
         FragmentUtil.replaceFragment(MainActivity.this, new FirstFragment(), null);
         fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -23,6 +26,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
             }
         });
+    }
+
+    @Override
+    public void initData() {
+
     }
 
     @Override

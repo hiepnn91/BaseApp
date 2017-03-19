@@ -10,44 +10,45 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.baseapp.hiepnn.mybaseproject.R;
 import com.baseapp.hiepnn.mybaseproject.databinding.FragmentFirstBinding;
 import com.baseapp.hiepnn.mybaseproject.utils.FragmentUtil;
 
-public class FirstFragment extends Fragment {
-    FragmentFirstBinding fragmentFirstBinding;
+import butterknife.InjectView;
+
+public class FirstFragment extends BaseFragment {
+    @InjectView(R.id.btnFrgSec)
+    Button btnFrgSec;
 
     public FirstFragment() {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        fragmentFirstBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_first, container, false);
-        View view = fragmentFirstBinding.getRoot();
-        fragmentFirstBinding.toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_menu));
-        fragmentFirstBinding.toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.e("onClick", "Menu");
-            }
-        });
-        fragmentFirstBinding.toolbarTitle.setText("Fragment First");
-        fragmentFirstBinding.imgbtnSearch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.e("onClick", "Search");
-            }
-        });
-        fragmentFirstBinding.btnFrgSec.setOnClickListener(new View.OnClickListener() {
+    protected int getLayoutId() {
+        return R.layout.fragment_first;
+    }
+
+    @Override
+    protected void initView(View root, LayoutInflater inflater, ViewGroup container) {
+        btnFrgSec.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FragmentUtil.pushFragment(getActivity(), new SecondFragment(), null);
             }
         });
         setHasOptionsMenu(true);
-        return view;
+    }
+
+    @Override
+    protected void getArgument(Bundle bundle) {
+
+    }
+
+    @Override
+    protected void initData() {
 
     }
 

@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
 import com.baseapp.hiepnn.mybaseproject.R;
@@ -33,12 +34,7 @@ public class FragmentUtil {
         }
 
         FragmentTransaction fragmentTransaction = activity.getSupportFragmentManager().beginTransaction();
-
-//        if (isShowAnimation) {
-//            fragmentTransaction.setCustomAnimations(R.anim.slide_in_up,
-//                    R.anim.slide_out_up);
-//        }
-
+//        fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left, R.anim.enter_from_left, R.anim.exit_to_right);
         fragmentTransaction.replace(R.id.container, fragment, tag);
         if (isPushInsteadOfReplace) {
             fragmentTransaction.addToBackStack(null);
@@ -48,6 +44,20 @@ public class FragmentUtil {
         fragmentTransaction.commitAllowingStateLoss();
     }
 
+    public static void popBackStack(Fragment fragment) {
+        final FragmentManager fm = fragment.getFragmentManager();
+        final int backStackCount = fm.getBackStackEntryCount();
+        if (backStackCount > 0) {
+            fragment.getFragmentManager().popBackStack();
+        } else {
+            fragment.getActivity().onBackPressed();
+        }
+    }
 
-
+    public static void popEntireFragmentBackStack(Fragment fragment) {
+        final int backStackCount = fragment.getFragmentManager().getBackStackEntryCount();
+        for (int i = 0; i < backStackCount; i++) {
+            fragment.getFragmentManager().popBackStackImmediate();
+        }
+    }
 }
