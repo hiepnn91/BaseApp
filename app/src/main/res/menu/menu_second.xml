@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.hiepnn.mydemoapplication.activities.MainActivity">
+    tools:context="com.baseapp.hiepnn.mybaseproject.activities.MainActivity">
     <item
         android:id="@+id/add"
         android:icon="@drawable/ic_add"
