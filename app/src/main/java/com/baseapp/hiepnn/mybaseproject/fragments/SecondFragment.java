@@ -1,22 +1,18 @@
 package com.baseapp.hiepnn.mybaseproject.fragments;
 
-import android.databinding.DataBindingUtil;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.baseapp.hiepnn.mybaseproject.R;
-import com.baseapp.hiepnn.mybaseproject.databinding.FragmentSecondBinding;
+import com.baseapp.hiepnn.mybaseproject.utils.FragmentUtil;
 
 public class SecondFragment extends BaseFragment {
     public SecondFragment() {
@@ -29,6 +25,8 @@ public class SecondFragment extends BaseFragment {
 
     @Override
     protected void initView(View root, LayoutInflater inflater, ViewGroup container) {
+        hideCoverNetworkLoading();
+        closeProgressDialog();
         setHasOptionsMenu(true);
     }
 
@@ -42,14 +40,19 @@ public class SecondFragment extends BaseFragment {
 
     }
 
-    public void popBackStack() {
-        final FragmentManager fm = getFragmentManager();
-        final int backStackCount = fm.getBackStackEntryCount();
-        if (backStackCount > 0) {
-            getFragmentManager().popBackStack();
-        } else {
-            getActivity().onBackPressed();
-        }
+    @Override
+    protected void processOnBackPress() {
+        FragmentUtil.popBackStack(SecondFragment.this);
+    }
+
+    @Override
+    protected Drawable getIconLeft() {
+        return getResources().getDrawable(R.drawable.ic_back);
+    }
+
+    @Override
+    protected void processCustomToolbar() {
+        FragmentUtil.popBackStack(SecondFragment.this);
     }
 
     @Override

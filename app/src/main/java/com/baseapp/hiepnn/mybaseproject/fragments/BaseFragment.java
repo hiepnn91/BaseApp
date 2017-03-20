@@ -1,11 +1,15 @@
 package com.baseapp.hiepnn.mybaseproject.fragments;
 
+import android.app.ProgressDialog;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -15,8 +19,10 @@ import android.widget.TextView;
 
 import com.baseapp.hiepnn.mybaseproject.BaseApplication;
 import com.baseapp.hiepnn.mybaseproject.R;
+import com.baseapp.hiepnn.mybaseproject.activities.BaseActivity;
 import com.baseapp.hiepnn.mybaseproject.activities.MainActivity;
 import com.baseapp.hiepnn.mybaseproject.callback.OnHeaderIconClickListener;
+import com.baseapp.hiepnn.mybaseproject.model.Event;
 import com.baseapp.hiepnn.mybaseproject.utils.DebugLog;
 import com.baseapp.hiepnn.mybaseproject.utils.KeyboardUtil;
 import com.baseapp.hiepnn.mybaseproject.utils.NetworkUtils;
@@ -31,10 +37,11 @@ import butterknife.Optional;
  * Created by Envy 15T on 6/4/2015.
  */
 public abstract class BaseFragment extends Fragment {
-
+    private static ProgressDialog progressDlg;
     protected View rootView;
 
     protected ViewGroup fragmentViewParent;
+    BaseActivity baseActivity;
 
     @Optional
     @InjectView(R.id.initialProgressBar)
@@ -144,8 +151,34 @@ public abstract class BaseFragment extends Fragment {
         if (getArguments() != null) {
             getArgument(getArguments());
         }
+        customToolbar();
+        baseActivity = (BaseActivity) getActivity();
         initView(rootView, mInflater, mContainer);
         initData();
+    }
+
+    public Event getEventBaseFragment() {
+        return baseActivity.getEventBaseActivity();
+    }
+
+
+    public void showProgressDialog(boolean cancleable) {
+        if (progressDlg != null && progressDlg.isShowing()) {
+            closeProgressDialog();
+        }
+        progressDlg = ProgressDialog.show(getActivity(), "", "Đang xử lý", true, true);
+        progressDlg.setCancelable(cancleable);
+        progressDlg.setCanceledOnTouchOutside(false);
+    }
+
+    public void closeProgressDialog() {
+        if (progressDlg != null) {
+            try {
+                progressDlg.dismiss();
+                progressDlg = null;
+            } catch (Exception e) {
+            }
+        }
     }
 
     @Override
@@ -166,6 +199,43 @@ public abstract class BaseFragment extends Fragment {
     abstract protected void getArgument(Bundle bundle);
 
     abstract protected void initData();
+
+    protected void onBackPressFragment(View view) {
+        view.setFocusableInTouchMode(true);
+        view.requestFocus();
+        view.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (event.getAction() == KeyEvent.ACTION_DOWN) {
+                    if (keyCode == KeyEvent.KEYCODE_BACK) {
+                        processOnBackPress();
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
+    }
+
+    abstract protected void processOnBackPress();
+
+    protected void customToolbar() {
+        final MainActivity act = (MainActivity) getActivity();
+        if (act.getSupportActionBar() != null) {
+            Toolbar toolbar = (Toolbar) act.findViewById(R.id.toolbar);
+            toolbar.setNavigationIcon(getIconLeft());
+            toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    processCustomToolbar();
+                }
+            });
+        }
+    }
+
+    abstract protected Drawable getIconLeft();
+
+    abstract protected void processCustomToolbar();
 
     public boolean isInterceptBackButton() {
         return false;

@@ -1,9 +1,7 @@
 package com.baseapp.hiepnn.mybaseproject.fragments;
 
-import android.databinding.DataBindingUtil;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -14,7 +12,6 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.baseapp.hiepnn.mybaseproject.R;
-import com.baseapp.hiepnn.mybaseproject.databinding.FragmentFirstBinding;
 import com.baseapp.hiepnn.mybaseproject.utils.FragmentUtil;
 
 import butterknife.InjectView;
@@ -33,9 +30,11 @@ public class FirstFragment extends BaseFragment {
 
     @Override
     protected void initView(View root, LayoutInflater inflater, ViewGroup container) {
+        getEventBaseFragment().doFillBackground("FirstFragment");
         btnFrgSec.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                showCoverNetworkLoading();showProgressDialog(false);
                 FragmentUtil.pushFragment(getActivity(), new SecondFragment(), null);
             }
         });
@@ -50,6 +49,19 @@ public class FirstFragment extends BaseFragment {
     @Override
     protected void initData() {
 
+    }
+
+    @Override
+    protected void processOnBackPress() {
+    }
+
+    @Override
+    protected Drawable getIconLeft() {
+        return getResources().getDrawable(R.drawable.ic_menu);
+    }
+
+    @Override
+    protected void processCustomToolbar() {
     }
 
     @Override

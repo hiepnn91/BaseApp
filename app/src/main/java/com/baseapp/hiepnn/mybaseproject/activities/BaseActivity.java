@@ -12,6 +12,7 @@ import android.view.Window;
 
 import com.baseapp.hiepnn.mybaseproject.R;
 import com.baseapp.hiepnn.mybaseproject.api.volley.event.ApiEvent;
+import com.baseapp.hiepnn.mybaseproject.model.Event;
 import com.baseapp.hiepnn.mybaseproject.utils.DebugLog;
 import com.baseapp.hiepnn.mybaseproject.utils.DialogUtil;
 import com.baseapp.hiepnn.mybaseproject.utils.EventBusHelper;
@@ -30,6 +31,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     AlertDialog dialogNoConnection;
 
     boolean isUnregistEventBus = false;
+    private Event eventBaseActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,9 +47,14 @@ public abstract class BaseActivity extends AppCompatActivity {
         ButterKnife.inject(this);
         EventBusHelper.register(this);
         isUnregistEventBus = false;
+        eventBaseActivity = new Event();
         initView();
         initDialogApi();
         initData();
+    }
+
+    public Event getEventBaseActivity() {
+        return eventBaseActivity;
     }
 
     private void initDialogApi() {
