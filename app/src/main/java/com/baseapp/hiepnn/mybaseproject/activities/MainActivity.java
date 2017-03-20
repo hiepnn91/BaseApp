@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.baseapp.hiepnn.mybaseproject.R;
 import com.baseapp.hiepnn.mybaseproject.callback.OnFillBackgroundListener;
 import com.baseapp.hiepnn.mybaseproject.fragments.FirstFragment;
+import com.baseapp.hiepnn.mybaseproject.fragments.ListUserFragment;
 import com.baseapp.hiepnn.mybaseproject.utils.DebugLog;
 import com.baseapp.hiepnn.mybaseproject.utils.FragmentUtil;
 
@@ -48,7 +49,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                 tvAppName.setText(nameTable);
             }
         });
-        FragmentUtil.replaceFragment(MainActivity.this, new FirstFragment(), null);
+        FragmentUtil.replaceFragment(MainActivity.this, new ListUserFragment(), null);
         toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
@@ -79,7 +80,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            FragmentUtil.replaceFragment(this, new FirstFragment(), null);
+            FragmentUtil.replaceFragment(this, new FirstFragment().newInstance("FirstFragment"), null);
         } else if (id == R.id.nav_gallery) {
 //            FragmentUtil.replaceFragment(this, new ThirdFragment().newInstance("ThirdFragment"), null);
         } else if (id == R.id.nav_slideshow) {

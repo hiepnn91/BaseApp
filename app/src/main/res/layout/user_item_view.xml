@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="12dp"
+        android:src="@drawable/congchuabaothu" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/avatar"
+        android:text="Quang Anh"
+        android:textColor="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/pj"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/name"
+        android:layout_toRightOf="@id/avatar"
+        android:text="Rola"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/role"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/pj"
+        android:layout_toRightOf="@id/avatar"
+        android:text="Dev"
+        android:visibility="gone" />
+</RelativeLayout>

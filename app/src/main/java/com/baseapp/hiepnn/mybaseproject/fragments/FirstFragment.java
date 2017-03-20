@@ -19,8 +19,14 @@ import butterknife.InjectView;
 public class FirstFragment extends BaseFragment {
     @InjectView(R.id.btnFrgSec)
     Button btnFrgSec;
+    String mNameFragment;
 
-    public FirstFragment() {
+    public static FirstFragment newInstance(String nameFragment) {
+        FirstFragment fm = new FirstFragment();
+        Bundle bundle = new Bundle();
+        bundle.putString("nameFragment", nameFragment);
+        fm.setArguments(bundle);
+        return fm;
     }
 
     @Override
@@ -30,11 +36,12 @@ public class FirstFragment extends BaseFragment {
 
     @Override
     protected void initView(View root, LayoutInflater inflater, ViewGroup container) {
-        getEventBaseFragment().doFillBackground("FirstFragment");
+        getEventBaseFragment().doFillBackground(mNameFragment);
         btnFrgSec.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showCoverNetworkLoading();showProgressDialog(false);
+                showCoverNetworkLoading();
+                showProgressDialog(false);
                 FragmentUtil.pushFragment(getActivity(), new SecondFragment(), null);
             }
         });
@@ -43,7 +50,7 @@ public class FirstFragment extends BaseFragment {
 
     @Override
     protected void getArgument(Bundle bundle) {
-
+        mNameFragment = bundle.getString("nameFragment");
     }
 
     @Override
