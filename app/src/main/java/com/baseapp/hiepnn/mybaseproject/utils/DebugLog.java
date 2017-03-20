@@ -14,14 +14,25 @@ package com.baseapp.hiepnn.mybaseproject.utils;
 import android.os.Build;
 import android.util.Log;
 
+
 import com.baseapp.hiepnn.mybaseproject.BuildConfig;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.xml.sax.InputSource;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.util.Map;
 import java.util.Set;
+
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Source;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.sax.SAXSource;
+import javax.xml.transform.sax.SAXTransformerFactory;
+import javax.xml.transform.stream.StreamResult;
 
 
 /**
@@ -99,17 +110,14 @@ public class DebugLog {
     }
 
     private static void format(String tag, Object source) {
-        tag = " " + tag + " ";
-        log(" ", " ");
-        log(" ", getSplitter(50) + tag + getSplitter(50));
-        log(" ", "" + source);
-        log(" ", getSplitter(100 + tag.length()));
-        log(" ", " ");
+        log(tag + " ", "" + source);
     }
+
     private static void log(String tag, String msg) {
         Log.e(tag, msg);
     }
-    public static void ee(String tag, Object source) {
+
+    public static void jsonFormat(String tag, Object source) {
         if (isDebuggable()) {
             Object o = getJsonObjFromStr(source);
             if (o != null) {
@@ -128,6 +136,36 @@ public class DebugLog {
                 format(tag, source);
             }
         }
+    }
+
+    public static String formatXml(String xml) {
+        try {
+            Transformer serializer = SAXTransformerFactory.newInstance().newTransformer();
+            serializer.setOutputProperty(OutputKeys.INDENT, "yes");
+            serializer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
+            Source xmlSource = new SAXSource(new InputSource(new ByteArrayInputStream(xml.getBytes())));
+            StreamResult res = new StreamResult(new ByteArrayOutputStream());
+            serializer.transform(xmlSource, res);
+            return new String(((ByteArrayOutputStream) res.getOutputStream()).toByteArray());
+        } catch (Exception e) {
+            return xml;
+        }
+    }
+
+    public static void showLogCat(String msg) {
+        StackTraceElement[] stackTraceElement = Thread.currentThread().getStackTrace();
+        int currentIndex = -1;
+        for (int i = 0; i < stackTraceElement.length; i++) {
+            if (stackTraceElement[i].getMethodName().compareTo("showLogCat") == 0) {
+                currentIndex = i + 1;
+                break;
+            }
+        }
+        String fullClassName = stackTraceElement[currentIndex].getClassName();
+        String className = fullClassName.substring(fullClassName.lastIndexOf(".") + 1);
+        String methodName = stackTraceElement[currentIndex].getMethodName();
+        String lineNumber = String.valueOf(stackTraceElement[currentIndex].getLineNumber());
+        Log.e(methodName, msg + "\nat " + fullClassName + "." + methodName + "(" + className + ".java:" + lineNumber + ")");
     }
 
     public static void i(String message) {

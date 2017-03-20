@@ -37,7 +37,7 @@ public class SecondFragment extends BaseFragment {
 
     @Override
     protected void initData() {
-
+        getEventBaseFragment().doFillBackground("SecondFragment");
     }
 
     @Override

@@ -4,4 +4,32 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="white">#ffffff</color>
+
+    <color name="transparent">#80ffffff</color>
+    <color name="yellow">#f7ab1c</color>
+    <color name="yellow_highlight">#f7b741</color>
+    <color name="year">#999999</color>
+    <color name="title">#222222</color>
+    <color name="red">#ed3b3b</color>
+    <color name="green">#008275</color>
+    <color name="transparent_full">#ffffffff</color>
+    <color name="browse">#ececec</color>
+    <color name="black">#000000</color>
+    <color name="candidate_normal">#FF000000</color>
+    <color name="candidate_recommended">#FFE35900</color>
+    <color name="candidate_other">#ff808080</color>
+    <color name="candidate_background">#bbffffff</color>
+    <color name="primary">#2196F3</color>
+    <color name="primary_dark">#1976D2</color>
+    <color name="primary_light">#BBDEFB</color>
+    <color name="accent">#4CAF50</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#B6B6B6</color>
+    <color name="background">#2e6ecf</color>
+    <color name="textcolor">#212121</color>
+    <color name="bordercolor">#d7d7d7</color>
+    <color name="iconcolor">#5799fe</color>
+    <color name="background_color_menu">#ebebeb</color>
 </resources>

@@ -7,6 +7,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.GravityCompat;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -68,6 +69,7 @@ public abstract class BaseFragment extends Fragment {
     TextView tvEmpty;
     LayoutInflater mInflater;
     ViewGroup mContainer;
+    MainActivity act;
 
     protected boolean isLoading = false;
 
@@ -220,16 +222,28 @@ public abstract class BaseFragment extends Fragment {
     abstract protected void processOnBackPress();
 
     protected void customToolbar() {
-        final MainActivity act = (MainActivity) getActivity();
+        act = (MainActivity) getActivity();
         if (act.getSupportActionBar() != null) {
             Toolbar toolbar = (Toolbar) act.findViewById(R.id.toolbar);
             toolbar.setNavigationIcon(getIconLeft());
             toolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    processCustomToolbar();
+                    if (getFragmentManager().getBackStackEntryCount() > 0) {
+                        processCustomToolbar();
+                    } else {
+                        loadMenuLeft();
+                    }
                 }
             });
+        }
+    }
+
+    protected void loadMenuLeft() {
+        if (act.drawer.isDrawerOpen(GravityCompat.START)) {
+            act.drawer.closeDrawer(GravityCompat.START);
+        } else {
+            act.drawer.openDrawer(GravityCompat.START);
         }
     }
 

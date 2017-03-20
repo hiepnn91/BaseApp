@@ -7,4 +7,6 @@
     <string name="dialog_error_api">Đã xảy ra lỗi. Vui lòng thử lại từ thời gian sau đó.</string>
     <string name="dialog_error_timeout">センターへの接続が失敗しました。\nしばらく経ってからもう1度お試しください。</string>
     <string name="dialog_error_no_connection">ネットワークに接続できません。もう一度ご確認ください。</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

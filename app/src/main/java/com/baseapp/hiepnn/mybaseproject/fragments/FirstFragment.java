@@ -62,6 +62,8 @@ public class FirstFragment extends BaseFragment {
 
     @Override
     protected void processCustomToolbar() {
+        loadMenuLeft();
+        Toast.makeText(getActivity(), "Menu", Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -74,7 +76,7 @@ public class FirstFragment extends BaseFragment {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.search) {
-            Toast.makeText(getActivity(), "Search", Toast.LENGTH_SHORT);
+            Toast.makeText(getActivity(), "Search", Toast.LENGTH_SHORT).show();
             return true;
         }
         return super.onOptionsItemSelected(item);
