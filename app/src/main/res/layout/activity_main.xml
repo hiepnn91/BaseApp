@@ -26,4 +26,8 @@
         android:layout_height="wrap_content"
         android:text="testconflictttttt"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="he he" />
 </android.support.v4.widget.DrawerLayout>
