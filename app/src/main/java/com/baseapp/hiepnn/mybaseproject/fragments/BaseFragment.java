@@ -219,7 +219,8 @@ public abstract class BaseFragment extends Fragment {
         });
     }
 
-    abstract protected void processOnBackPress();
+    protected void processOnBackPress() {
+    }
 
     protected void customToolbar() {
         act = (MainActivity) getActivity();
@@ -247,9 +248,13 @@ public abstract class BaseFragment extends Fragment {
         }
     }
 
-    abstract protected Drawable getIconLeft();
+    protected Drawable getIconLeft() {
+        return null;
+    }
 
-    abstract protected void processCustomToolbar();
+    protected void processCustomToolbar() {
+
+    }
 
     public boolean isInterceptBackButton() {
         return false;

@@ -62,6 +62,7 @@ public class ListUserFragment extends BaseFragment implements ListUserView, View
 
     @Override
     protected void initView(View root, LayoutInflater inflater, ViewGroup container) {
+        getEventBaseFragment().doFillBackground("ListFragment");
         loading = (ProgressBar) root.findViewById(R.id.loading);
         tvMessage = (TextView) root.findViewById(R.id.message);
         btReload = (Button) root.findViewById(R.id.reload);

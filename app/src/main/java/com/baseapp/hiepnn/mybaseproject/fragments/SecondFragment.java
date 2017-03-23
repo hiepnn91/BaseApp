@@ -9,12 +9,19 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.baseapp.hiepnn.mybaseproject.R;
 import com.baseapp.hiepnn.mybaseproject.utils.FragmentUtil;
 
+import butterknife.InjectView;
+import butterknife.OnClick;
+
 public class SecondFragment extends BaseFragment {
+    @InjectView(R.id.btnFrgThird)
+    Button btnFrgThird;
+
     public SecondFragment() {
     }
 
@@ -38,6 +45,13 @@ public class SecondFragment extends BaseFragment {
     @Override
     protected void initData() {
         getEventBaseFragment().doFillBackground("SecondFragment");
+    }
+
+
+    @OnClick(R.id.btnFrgThird)
+    void onClickFrgThird() {
+        FragmentUtil.popEntireFragmentBackStack(SecondFragment.this);
+        FragmentUtil.pushFragment(getActivity(), new ThirdFragment(), null);
     }
 
     @Override

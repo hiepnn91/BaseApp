@@ -70,7 +70,6 @@ public class FirstFragment extends BaseFragment {
     @Override
     protected void processCustomToolbar() {
         loadMenuLeft();
-        Toast.makeText(getActivity(), "Menu", Toast.LENGTH_SHORT).show();
     }
 
     @Override
