@@ -29,5 +29,5 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="123" />
+        android:text="gigigigigigigig" />
 </android.support.v4.widget.DrawerLayout>
