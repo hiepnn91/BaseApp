@@ -33,6 +33,7 @@ public class SecondFragment extends BaseFragment {
     @Override
     protected void initView(View root, LayoutInflater inflater, ViewGroup container) {
         hideCoverNetworkLoading();
+        setCustomToolbar(true);
         closeProgressDialog();
         setHasOptionsMenu(true);
     }

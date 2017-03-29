@@ -34,18 +34,18 @@ public class ThirdChildOneFragment extends BaseFragment {
 
     }
 
-    @Override
-    protected void processCustomToolbar() {
-        FragmentUtil.popBackStack(ThirdChildOneFragment.this);
-    }
-
-    @Override
-    protected void processOnBackPress() {
-        FragmentUtil.popBackStack(ThirdChildOneFragment.this);
-    }
-
-    @Override
-    protected Drawable getIconLeft() {
-        return getResources().getDrawable(R.drawable.ic_back);
-    }
+//    @Override
+//    protected void processCustomToolbar() {
+//        FragmentUtil.popBackStack(ThirdChildOneFragment.this);
+//    }
+//
+//    @Override
+//    protected void processOnBackPress() {
+//        FragmentUtil.popBackStack(ThirdChildOneFragment.this);
+//    }
+//
+//    @Override
+//    protected Drawable getIconLeft() {
+//        return getResources().getDrawable(R.drawable.ic_back);
+//    }
 }

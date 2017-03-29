@@ -70,6 +70,7 @@ public abstract class BaseFragment extends Fragment {
     LayoutInflater mInflater;
     ViewGroup mContainer;
     MainActivity act;
+    private boolean isCustomToolbar = false;
 
     protected boolean isLoading = false;
 
@@ -153,10 +154,13 @@ public abstract class BaseFragment extends Fragment {
         if (getArguments() != null) {
             getArgument(getArguments());
         }
-        customToolbar();
         baseActivity = (BaseActivity) getActivity();
         initView(rootView, mInflater, mContainer);
         initData();
+    }
+
+    public void setCustomToolbar(boolean isCustom) {
+        customToolbar(isCustom);
     }
 
     public Event getEventBaseFragment() {
@@ -222,21 +226,28 @@ public abstract class BaseFragment extends Fragment {
     protected void processOnBackPress() {
     }
 
-    protected void customToolbar() {
+    protected void customToolbar(boolean isCustom) {
         act = (MainActivity) getActivity();
-        if (act.getSupportActionBar() != null) {
-            Toolbar toolbar = (Toolbar) act.findViewById(R.id.toolbar);
-            toolbar.setNavigationIcon(getIconLeft());
-            toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (getFragmentManager().getBackStackEntryCount() > 0) {
-                        processCustomToolbar();
-                    } else {
-                        loadMenuLeft();
+        if (isCustom) {
+            if (act.getSupportActionBar() != null) {
+                Toolbar toolbar = (Toolbar) act.findViewById(R.id.toolbar);
+                toolbar.setNavigationIcon(getIconLeft());
+                toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        if (getFragmentManager().getBackStackEntryCount() > 0) {
+                            processCustomToolbar();
+                        } else {
+//                        loadMenuLeft();
+                        }
                     }
-                }
-            });
+                });
+            }
+        } else {
+            if (act.getSupportActionBar() != null) {
+                Toolbar toolbar = (Toolbar) act.findViewById(R.id.toolbar);
+                toolbar.setNavigationIcon(null);
+            }
         }
     }
 

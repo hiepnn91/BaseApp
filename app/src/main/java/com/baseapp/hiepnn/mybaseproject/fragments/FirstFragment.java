@@ -37,6 +37,7 @@ public class FirstFragment extends BaseFragment {
     @Override
     protected void initView(View root, LayoutInflater inflater, ViewGroup container) {
         getEventBaseFragment().doFillBackground(mNameFragment);
+        setCustomToolbar(true);
         btnFrgSec.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

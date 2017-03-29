@@ -1,10 +1,12 @@
 package com.baseapp.hiepnn.mybaseproject.fragments;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.baseapp.hiepnn.mybaseproject.R;
+import com.baseapp.hiepnn.mybaseproject.utils.FragmentUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +35,7 @@ public class ThirdFragment extends BaseFragment {
     @Override
     protected void initView(View root, LayoutInflater inflater, ViewGroup container) {
         getEventBaseFragment().doFillBackground("ThirdFragment");
+        setCustomToolbar(true);
         viewPager = (ViewPager) root.findViewById(R.id.viewpager);
         tabLayout = (TabLayout) root.findViewById(R.id.tabs);
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -104,7 +108,7 @@ public class ThirdFragment extends BaseFragment {
         viewPager.setAdapter(adapter);
     }
 
-    class ViewPagerAdapter extends FragmentPagerAdapter {
+    class ViewPagerAdapter extends FragmentStatePagerAdapter {
         private final List<Fragment> mFragmentList = new ArrayList<>();
         private final List<String> mFragmentTitleList = new ArrayList<>();
 
@@ -131,5 +135,20 @@ public class ThirdFragment extends BaseFragment {
         public CharSequence getPageTitle(int position) {
             return mFragmentTitleList.get(position);
         }
+    }
+
+    @Override
+    protected void processCustomToolbar() {
+        FragmentUtil.popBackStack(this);
+    }
+
+    @Override
+    protected void processOnBackPress() {
+        FragmentUtil.popBackStack(this);
+    }
+
+    @Override
+    protected Drawable getIconLeft() {
+        return getResources().getDrawable(R.drawable.ic_back);
     }
 }
