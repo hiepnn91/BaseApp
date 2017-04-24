@@ -82,7 +82,7 @@ public class ListUserHelper {
                 if (list != null) onLoadUserResult.onLoadUserSuccess(list);
                 else onLoadUserResult.onLoadUserError();
             } else {
-                throw new RuntimeException("Please set callback for OnLoadUserResult");
+                throw new RuntimeException("Please set callback for OnReceiveResponse");
             }
         }
     }

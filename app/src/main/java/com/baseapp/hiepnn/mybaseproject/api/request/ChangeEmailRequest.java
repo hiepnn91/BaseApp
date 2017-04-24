@@ -27,7 +27,7 @@ public class ChangeEmailRequest extends ObjectApiRequest<SimpleResponse> {
 
     @Override
     public String getRequestURL() {
-        return ApiConstant.BASE_URL + ApiConstant.CHANGE_EMAIL;
+        return ApiConstant.BASE_URL + ApiConstant.LOGIN;
     }
 
     @Override

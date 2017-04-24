@@ -84,13 +84,13 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         } else if (id == R.id.nav_gallery) {
 //            FragmentUtil.replaceFragment(this, new ThirdFragment().newInstance("ThirdFragment"), null);
         } else if (id == R.id.nav_slideshow) {
-            DebugLog.showLogCat("nav_slideshow");
+//            DebugLog.showLogCat("nav_slideshow");
         } else if (id == R.id.nav_manage) {
-            DebugLog.showLogCat("nav_manage");
+//            DebugLog.showLogCat("nav_manage");
         } else if (id == R.id.nav_share) {
-            DebugLog.showLogCat("nav_share");
+//            DebugLog.showLogCat("nav_share");
         } else if (id == R.id.nav_send) {
-            DebugLog.showLogCat("nav_send");
+//            DebugLog.showLogCat("nav_send");
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

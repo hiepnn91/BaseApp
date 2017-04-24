@@ -1,6 +1,7 @@
 package com.baseapp.hiepnn.mybaseproject.fragments;
 
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -22,6 +23,7 @@ import com.baseapp.hiepnn.mybaseproject.BaseApplication;
 import com.baseapp.hiepnn.mybaseproject.R;
 import com.baseapp.hiepnn.mybaseproject.activities.BaseActivity;
 import com.baseapp.hiepnn.mybaseproject.activities.MainActivity;
+import com.baseapp.hiepnn.mybaseproject.api.request.BaseRequest;
 import com.baseapp.hiepnn.mybaseproject.callback.OnHeaderIconClickListener;
 import com.baseapp.hiepnn.mybaseproject.model.Event;
 import com.baseapp.hiepnn.mybaseproject.utils.DebugLog;
@@ -29,6 +31,8 @@ import com.baseapp.hiepnn.mybaseproject.utils.KeyboardUtil;
 import com.baseapp.hiepnn.mybaseproject.utils.NetworkUtils;
 import com.baseapp.hiepnn.mybaseproject.utils.UiUtil;
 
+
+import java.util.ArrayList;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -172,9 +176,15 @@ public abstract class BaseFragment extends Fragment {
         if (progressDlg != null && progressDlg.isShowing()) {
             closeProgressDialog();
         }
-        progressDlg = ProgressDialog.show(getActivity(), "", "Đang xử lý", true, true);
+        progressDlg = ProgressDialog.show(getActivity(), "", "Đang xử lý", true, cancleable);
         progressDlg.setCancelable(cancleable);
-        progressDlg.setCanceledOnTouchOutside(false);
+        progressDlg.setCanceledOnTouchOutside(cancleable);
+        progressDlg.setOnCancelListener(new DialogInterface.OnCancelListener() {
+            @Override
+            public void onCancel(DialogInterface dialog) {
+                cancelAllRequest(getArrayRequest());
+            }
+        });
     }
 
     public void closeProgressDialog() {
@@ -185,6 +195,17 @@ public abstract class BaseFragment extends Fragment {
             } catch (Exception e) {
             }
         }
+    }
+
+    public void cancelAllRequest(ArrayList<BaseRequest> callArrayList) {
+        for (int i = 0; i < callArrayList.size(); i++) {
+            DebugLog.showLogCat("Cancel");
+            callArrayList.get(i).cancelRequest();
+        }
+    }
+
+    public ArrayList<BaseRequest> getArrayRequest() {
+        return null;
     }
 
     @Override

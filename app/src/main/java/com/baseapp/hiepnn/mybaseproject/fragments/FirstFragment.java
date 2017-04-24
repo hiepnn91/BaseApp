@@ -12,7 +12,17 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.baseapp.hiepnn.mybaseproject.R;
+import com.baseapp.hiepnn.mybaseproject.api.request.BaseRequest;
+import com.baseapp.hiepnn.mybaseproject.api.request.GetNewListByPlace;
+import com.baseapp.hiepnn.mybaseproject.api.request.LoginRequest;
+import com.baseapp.hiepnn.mybaseproject.api.response.getnewlistbyplace.NewListByPlace;
+import com.baseapp.hiepnn.mybaseproject.api.response.loginresponse.LoginResponse;
+import com.baseapp.hiepnn.mybaseproject.api.volley.callback.ApiObjectCallBack;
 import com.baseapp.hiepnn.mybaseproject.utils.FragmentUtil;
+
+import org.json.JSONException;
+
+import java.util.ArrayList;
 
 import butterknife.InjectView;
 
@@ -20,6 +30,8 @@ public class FirstFragment extends BaseFragment {
     @InjectView(R.id.btnFrgSec)
     Button btnFrgSec;
     String mNameFragment;
+    LoginRequest loginRequest;
+    GetNewListByPlace getNewListByPlace;
 
     public static FirstFragment newInstance(String nameFragment) {
         FirstFragment fm = new FirstFragment();
@@ -41,9 +53,11 @@ public class FirstFragment extends BaseFragment {
         btnFrgSec.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showCoverNetworkLoading();
-                showProgressDialog(false);
-                FragmentUtil.pushFragment(getActivity(), new SecondFragment(), null);
+                try {
+                    callLogin();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
             }
         });
         setHasOptionsMenu(true);
@@ -57,6 +71,44 @@ public class FirstFragment extends BaseFragment {
     @Override
     protected void initData() {
 
+    }
+
+    public void callLogin() throws JSONException {
+        showProgressDialog(true);
+        loginRequest = new LoginRequest("test@test.com", "123123");
+        loginRequest.callRequest(new ApiObjectCallBack<LoginResponse>() {
+            @Override
+            public void onSuccess(LoginResponse data) {
+                if (data.getStatusCode() == 200) {
+                    getNewListByPlace = new GetNewListByPlace(data.getApiToken());
+                    getNewListByPlace.callRequest(new ApiObjectCallBack<NewListByPlace>() {
+                        @Override
+                        public void onSuccess(NewListByPlace data) {
+                            closeProgressDialog();
+                            FragmentUtil.pushFragment(getActivity(), new SecondFragment(), null);
+                        }
+
+                        @Override
+                        public void onFail(int failCode, String message) {
+
+                        }
+                    });
+                }
+            }
+
+            @Override
+            public void onFail(int failCode, String message) {
+                closeProgressDialog();
+            }
+        });
+    }
+
+    @Override
+    public ArrayList<BaseRequest> getArrayRequest() {
+        ArrayList<BaseRequest> baseRequests = new ArrayList<>();
+        baseRequests.add(loginRequest);
+        baseRequests.add(getNewListByPlace);
+        return baseRequests;
     }
 
     @Override

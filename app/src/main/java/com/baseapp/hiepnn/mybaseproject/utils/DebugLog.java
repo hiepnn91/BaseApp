@@ -118,12 +118,24 @@ public class DebugLog {
     }
 
     public static void jsonFormat(String tag, Object source) {
+        StackTraceElement[] stackTraceElement = Thread.currentThread().getStackTrace();
+        int currentIndex = -1;
+        for (int i = 0; i < stackTraceElement.length; i++) {
+            if (stackTraceElement[i].getMethodName().compareTo("jsonFormat") == 0) {
+                currentIndex = i + 1;
+                break;
+            }
+        }
+        String fullClassName = stackTraceElement[currentIndex].getClassName();
+        String className = fullClassName.substring(fullClassName.lastIndexOf(".") + 1);
+        String methodName = stackTraceElement[currentIndex].getMethodName();
+        String lineNumber = String.valueOf(stackTraceElement[currentIndex].getLineNumber());
         if (isDebuggable()) {
             Object o = getJsonObjFromStr(source);
             if (o != null) {
                 try {
                     if (o instanceof JSONObject) {
-                        format(tag, ((JSONObject) o).toString(2));
+                        format(tag, ((JSONObject) o).toString(2) + "\nat " + fullClassName + "." + methodName + "(" + className + ".java:" + lineNumber + ")");
                     } else if (o instanceof JSONArray) {
                         format(tag, ((JSONArray) o).toString(2));
                     } else {
@@ -152,7 +164,7 @@ public class DebugLog {
         }
     }
 
-    public static void showLogCat(String msg) {
+    public static void showLogCat(String tag) {
         StackTraceElement[] stackTraceElement = Thread.currentThread().getStackTrace();
         int currentIndex = -1;
         for (int i = 0; i < stackTraceElement.length; i++) {
@@ -165,7 +177,7 @@ public class DebugLog {
         String className = fullClassName.substring(fullClassName.lastIndexOf(".") + 1);
         String methodName = stackTraceElement[currentIndex].getMethodName();
         String lineNumber = String.valueOf(stackTraceElement[currentIndex].getLineNumber());
-        Log.e(methodName, msg + "\nat " + fullClassName + "." + methodName + "(" + className + ".java:" + lineNumber + ")");
+        Log.e(methodName, tag + "\nat " + fullClassName + "." + methodName + "(" + className + ".java:" + lineNumber + ")");
     }
 
     public static void i(String message) {
