@@ -9,7 +9,6 @@ import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
 import org.apache.http.Header;
-import org.apache.http.client.config.RequestConfig;
 import org.json.JSONObject;
 
 /**
@@ -22,12 +21,22 @@ public abstract class BaseRequest<T> {
     private ApiObjectCallBack<T> mApiObjectCallBack;
 
     public void callRequest(ApiObjectCallBack<T> tApiObjectCallBack) {
+        client.setTimeout(ApiConstant.REQUEST_TIMEOUT);
+        client.setConnectTimeout(ApiConstant.REQUEST_TIMEOUT);
+        client.setResponseTimeout(ApiConstant.REQUEST_TIMEOUT);
         mApiObjectCallBack = tApiObjectCallBack;
         mJsonHttpResponseHandler = new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 DebugLog.jsonFormat("response", response);
                 mApiObjectCallBack.onSuccess(new Gson().fromJson(response.toString(), getResponseClass()));
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+                super.onFailure(statusCode, headers, throwable, errorResponse);
+                DebugLog.showLogCat(throwable.getMessage());
+                mApiObjectCallBack.onFail(statusCode, throwable.getMessage());
             }
 
             @Override
@@ -42,10 +51,6 @@ public abstract class BaseRequest<T> {
         } else {
             client.get(getAbsoluteUrl(), putParams(), mJsonHttpResponseHandler);
         }
-        RequestConfig config = RequestConfig.custom().
-                setConnectTimeout(5 * 1000).
-                setConnectionRequestTimeout(5 * 1000).
-                setSocketTimeout(5 * 1000).build();
     }
 
     public void cancelRequest() {

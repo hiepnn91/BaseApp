@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.baseapp.hiepnn.mybaseproject.R;
@@ -21,8 +22,16 @@ import butterknife.OnClick;
 public class SecondFragment extends BaseFragment {
     @InjectView(R.id.btnFrgThird)
     Button btnFrgThird;
+    @InjectView(R.id.tv_hello)
+    TextView tv_hello;
+    String nameFragment;
 
-    public SecondFragment() {
+    public static SecondFragment newInstance(String nameFragment) {
+        SecondFragment fm = new SecondFragment();
+        Bundle bundle = new Bundle();
+        bundle.putString("nameFragment", nameFragment);
+        fm.setArguments(bundle);
+        return fm;
     }
 
     @Override
@@ -34,11 +43,12 @@ public class SecondFragment extends BaseFragment {
     protected void initView(View root, LayoutInflater inflater, ViewGroup container) {
         setCustomToolbar(true);
         setHasOptionsMenu(true);
+        tv_hello.setText(nameFragment);
     }
 
     @Override
     protected void getArgument(Bundle bundle) {
-
+        nameFragment = bundle.getString("nameFragment");
     }
 
     @Override

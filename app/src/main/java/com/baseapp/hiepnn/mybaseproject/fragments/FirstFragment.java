@@ -18,6 +18,7 @@ import com.baseapp.hiepnn.mybaseproject.api.request.LoginRequest;
 import com.baseapp.hiepnn.mybaseproject.api.response.getnewlistbyplace.NewListByPlace;
 import com.baseapp.hiepnn.mybaseproject.api.response.loginresponse.LoginResponse;
 import com.baseapp.hiepnn.mybaseproject.api.volley.callback.ApiObjectCallBack;
+import com.baseapp.hiepnn.mybaseproject.utils.DialogUtil;
 import com.baseapp.hiepnn.mybaseproject.utils.FragmentUtil;
 
 import org.json.JSONException;
@@ -85,12 +86,13 @@ public class FirstFragment extends BaseFragment {
                         @Override
                         public void onSuccess(NewListByPlace data) {
                             closeProgressDialog();
-                            FragmentUtil.pushFragment(getActivity(), new SecondFragment(), null);
+                            FragmentUtil.pushFragment(getActivity(), new SecondFragment().newInstance(data.getNewsByCity().get(0).getSubTitle()), null);
                         }
 
                         @Override
                         public void onFail(int failCode, String message) {
-
+                            closeProgressDialog();
+                            DialogUtil.showDialog(getActivity(), "Thông báo", message);
                         }
                     });
                 }
@@ -99,6 +101,7 @@ public class FirstFragment extends BaseFragment {
             @Override
             public void onFail(int failCode, String message) {
                 closeProgressDialog();
+                DialogUtil.showDialog(getActivity(), "Thông báo", message);
             }
         });
     }

@@ -200,7 +200,8 @@ public abstract class BaseFragment extends Fragment {
     public void cancelAllRequest(ArrayList<BaseRequest> callArrayList) {
         for (int i = 0; i < callArrayList.size(); i++) {
             DebugLog.showLogCat("Cancel");
-            callArrayList.get(i).cancelRequest();
+            if (callArrayList.get(i) != null)
+                callArrayList.get(i).cancelRequest();
         }
     }
 
