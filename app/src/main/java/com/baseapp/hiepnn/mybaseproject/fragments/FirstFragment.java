@@ -18,8 +18,12 @@ import com.baseapp.hiepnn.mybaseproject.api.request.LoginRequest;
 import com.baseapp.hiepnn.mybaseproject.api.response.getnewlistbyplace.NewListByPlace;
 import com.baseapp.hiepnn.mybaseproject.api.response.loginresponse.LoginResponse;
 import com.baseapp.hiepnn.mybaseproject.api.volley.callback.ApiObjectCallBack;
+import com.baseapp.hiepnn.mybaseproject.constant.AppConstant;
+import com.baseapp.hiepnn.mybaseproject.utils.DebugLog;
 import com.baseapp.hiepnn.mybaseproject.utils.DialogUtil;
 import com.baseapp.hiepnn.mybaseproject.utils.FragmentUtil;
+import com.baseapp.hiepnn.mybaseproject.utils.SharedPrefUtils;
+import com.baseapp.hiepnn.mybaseproject.utils.SharedPrefsUtils;
 
 import org.json.JSONException;
 
@@ -75,23 +79,27 @@ public class FirstFragment extends BaseFragment {
     }
 
     public void callLogin() throws JSONException {
-        showProgressDialog(true);
+        showCoverNetworkLoading();
         loginRequest = new LoginRequest("test@test.com", "123123");
         loginRequest.callRequest(new ApiObjectCallBack<LoginResponse>() {
             @Override
             public void onSuccess(LoginResponse data) {
                 if (data.getStatusCode() == 200) {
+                    if (SharedPrefsUtils.getStringPreference(getActivity(), AppConstant.ACCESS_TOKEN) == null) {
+                        DebugLog.showLogCat("null Pre");
+                        SharedPrefsUtils.setStringPreference(getActivity(), AppConstant.ACCESS_TOKEN, data.getApiToken());
+                    }
                     getNewListByPlace = new GetNewListByPlace(data.getApiToken());
                     getNewListByPlace.callRequest(new ApiObjectCallBack<NewListByPlace>() {
                         @Override
                         public void onSuccess(NewListByPlace data) {
-                            closeProgressDialog();
+                            hideCoverNetworkLoading();
                             FragmentUtil.pushFragment(getActivity(), new SecondFragment().newInstance(data.getNewsByCity().get(0).getSubTitle()), null);
                         }
 
                         @Override
                         public void onFail(int failCode, String message) {
-                            closeProgressDialog();
+                            hideCoverNetworkLoading();
                             DialogUtil.showDialog(getActivity(), "Thông báo", message);
                         }
                     });
@@ -100,7 +108,7 @@ public class FirstFragment extends BaseFragment {
 
             @Override
             public void onFail(int failCode, String message) {
-                closeProgressDialog();
+                hideCoverNetworkLoading();
                 DialogUtil.showDialog(getActivity(), "Thông báo", message);
             }
         });

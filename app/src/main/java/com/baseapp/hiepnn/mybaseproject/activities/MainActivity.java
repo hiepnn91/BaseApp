@@ -49,7 +49,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                 tvAppName.setText(nameTable);
             }
         });
-        FragmentUtil.replaceFragment(MainActivity.this, new ListUserFragment(), null);
+        FragmentUtil.replaceFragment(MainActivity.this, new FirstFragment().newInstance("FirstFragment"), null);
         toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();

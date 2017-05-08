@@ -14,7 +14,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.baseapp.hiepnn.mybaseproject.R;
+import com.baseapp.hiepnn.mybaseproject.constant.AppConstant;
+import com.baseapp.hiepnn.mybaseproject.utils.DebugLog;
 import com.baseapp.hiepnn.mybaseproject.utils.FragmentUtil;
+import com.baseapp.hiepnn.mybaseproject.utils.SharedPrefsUtils;
 
 import butterknife.InjectView;
 import butterknife.OnClick;
@@ -54,6 +57,7 @@ public class SecondFragment extends BaseFragment {
     @Override
     protected void initData() {
         getEventBaseFragment().doFillBackground("SecondFragment");
+        DebugLog.showLogCat(SharedPrefsUtils.getStringPreference(getActivity(), AppConstant.ACCESS_TOKEN));
     }
 
 
