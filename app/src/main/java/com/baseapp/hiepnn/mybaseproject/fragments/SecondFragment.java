@@ -57,7 +57,6 @@ public class SecondFragment extends BaseFragment {
     @Override
     protected void initData() {
         getEventBaseFragment().doFillBackground("SecondFragment");
-        DebugLog.showLogCat(SharedPrefsUtils.getStringPreference(getActivity(), AppConstant.ACCESS_TOKEN));
     }
 
 

@@ -11,16 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d2b3715-226a-4081-b18a-ac042fb033b9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/loading2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/utils/NetUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/utils/SharedPrefsUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/gtu_mca_progress_indeterminate3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/activities/TestActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/fragments/TestFragment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/utils/GsonUtils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/activities/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/activities/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/api/request/BaseRequest.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/api/request/BaseRequest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/fragments/FirstFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/fragments/FirstFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/fragments/SecondFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/fragments/SecondFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_base_fragment.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_base_fragment.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_cover_network_loading.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_cover_network_loading.xml" />
     </list>
     <ignored path="DemoApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,11 +74,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="AppConstant.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/constant/AppConstant.java">
+      <file leaf-file-name="FirstFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/fragments/FirstFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+            <state relative-caret-position="396">
+              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -90,46 +87,98 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/activities/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="51" column="81" selection-start-line="51" selection-start-column="81" selection-end-line="51" selection-end-column="81" />
+            <state relative-caret-position="1232">
+              <caret line="82" column="71" selection-start-line="82" selection-start-column="71" selection-end-line="82" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu_main.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestFragment.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/fragments/TestFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
               <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#1407#1408#0" expanded="false" />
-                <element signature="e#1452#1453#0" expanded="false" />
-                <element signature="e#1820#1821#0" expanded="false" />
-                <element signature="e#1880#1881#0" expanded="false" />
-                <element signature="e#2377#2378#0" expanded="false" />
-                <element signature="e#2409#2410#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#928#929#0" expanded="true" />
+                <element signature="e#958#959#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FirstFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/fragments/FirstFragment.java">
+      <file leaf-file-name="BaseFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/fragments/BaseFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1210">
-              <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#1832#1833#0" expanded="false" />
-                <element signature="e#1878#1879#0" expanded="false" />
-                <element signature="e#2492#2493#0" expanded="false" />
-                <element signature="e#2556#2557#0" expanded="false" />
-                <element signature="e#4738#4739#0" expanded="false" />
-                <element signature="e#4807#4808#0" expanded="false" />
-                <element signature="e#4866#4867#0" expanded="false" />
-                <element signature="e#4896#4897#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="154">
+              <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SecondFragment.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/fragments/SecondFragment.java">
+      <file leaf-file-name="AccountManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/AccountManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+            <state relative-caret-position="176">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/BaseApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_first.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_first.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="528">
+              <caret line="24" column="38" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="770">
+              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UiUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/utils/UiUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -1686,7 +1735,7 @@
     <option name="modificationStamps">
       <map>
         <entry key="C:\Users\HiepNN\StudioProjects\DemoApp" value="4429037100390" />
-        <entry key="C:\Users\hiepn\StudioProjects\BaseApp" value="4476188727169" />
+        <entry key="C:\Users\hiepn\StudioProjects\BaseApp" value="4477568654603" />
         <entry key="C:\Users\hiepn\StudioProjects\DemoApp" value="4467273256416" />
       </map>
     </option>
@@ -1856,10 +1905,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_first.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_toolbar.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml" />
@@ -1896,17 +1941,21 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/api/request/GetNewListByPlace.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/api/volley/core/BaseApiRequest.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/constant/ApiConstant.java" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_second.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/fragments/BaseFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/api/request/BaseRequest.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_base_fragment.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_cover_network_loading.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/gtu_mca_progress_indeterminate3.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/utils/NetUtils.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/activities/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/utils/GsonUtils.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/fragments/SecondFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/api/request/BaseRequest.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/activities/TestActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/fragments/FirstFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/fragments/TestFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml" />
       </list>
     </option>
   </component>
@@ -1941,10 +1990,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane />
-      </pane>
       <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="AndroidView">
@@ -1967,13 +2012,17 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane />
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="show.do.not.ask.upgrade.gradle.plugin.version" value="2.2.0" />
     <property name="device.picker.selection" value="3300d629a0ad83ed" />
     <property name="UI_DESIGNER_EDITOR_MODE.NlPaletteManager-NlPreviewForm.SHOW" value="false" />
-    <property name="settings.editor.selected.configurable" value="instant.run" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
@@ -1987,11 +2036,11 @@
       <recent name="com.example.hiepnn.mydemoapplication.activities" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.baseapp.hiepnn.mybaseproject.utils" />
       <recent name="com.baseapp.hiepnn.mybaseproject.fragments" />
       <recent name="com.baseapp.hiepnn.mybaseproject.model" />
       <recent name="com.baseapp.hiepnn.mybaseproject" />
       <recent name="com.baseapp.hiepnn.mybaseproject.constant" />
-      <recent name="com.baseapp.hiepnn.mybaseproject.utils" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\hiepn\StudioProjects\BaseApp\app\src\main\java\com\baseapp\hiepnn\mybaseproject\utils" />
@@ -2450,7 +2499,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493600968256</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="build base request">
+      <created>1494209414362</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1494209414362</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2463,9 +2519,9 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5482353" sideWeight="0.5021482" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6117647" sideWeight="0.49785176" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.74941176" sideWeight="0.49785176" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282532" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282353" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32744405" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33408833" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2522,114 +2578,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/utils/DebugLog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-245">
-          <caret line="138" column="32" selection-start-line="138" selection-start-column="32" selection-end-line="138" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.loopj.android/android-async-http/1.4.8/ec314dce534e83c93364388d023625bb8e605e38/android-async-http-1.4.8-sources.jar!/com/loopj/android/http/JsonHttpResponseHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1576">
-          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/callback/OnLoadUserResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/api/request/ListUserHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="84" column="68" selection-start-line="84" selection-start-column="68" selection-end-line="84" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/api/response/loginresponse/CurrentUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.loopj.android/android-async-http/1.4.8/ec314dce534e83c93364388d023625bb8e605e38/android-async-http-1.4.8-sources.jar!/com/loopj/android/http/AsyncHttpClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="1011" column="25" selection-start-line="1011" selection-start-column="25" selection-end-line="1011" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/model/Event.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/api/response/loginresponse/LoginResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/callback/OnReceiveResponse.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/api/volley/core/BaseTypeRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-176">
-          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/api/volley/core/ObjectApiRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/api/request/ChangeEmailRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-132">
-          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/api/response/getnewlistbyplace/NewListByPlace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/callback/MyJsonHttpResponseHandler.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/api/request/LoginRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient-android/4.3.5/49354cff4cb9adbfde5202bd0f9075e197ce8ae0/httpclient-android-4.3.5-sources.jar!/org/apache/http/impl/client/CloseableHttpClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="57" column="22" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.loopj.android/android-async-http/1.4.6/3599ba755b1e9162955c5a031a7d5447cf8c93f/android-async-http-1.4.6-sources.jar!/com/loopj/android/http/AsyncHttpClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5602">
@@ -2638,13 +2586,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_second.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="11" column="33" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="33" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/api/volley/bean/ErrorMessage.java">
@@ -2675,13 +2623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/fragments/BaseFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="132" column="60" selection-start-line="132" selection-start-column="60" selection-end-line="132" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-25/data/res/values/styles_holo.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -2690,33 +2631,33 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_cover_network_loading.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_initial_empty_list.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_initial_empty_list.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_initial_network_error.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_initial_network_error.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/gtu_mca_progress_indeterminate3.xml">
@@ -2727,34 +2668,19 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_base_fragment.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/api/volley/callback/ApiObjectCallBack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/api/request/BaseRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="3" column="57" selection-start-line="3" selection-start-column="57" selection-end-line="3" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2793,29 +2719,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/AccountManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="5" column="78" selection-start-line="5" selection-start-column="78" selection-end-line="5" selection-end-column="78" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/utils/DialogUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="24" column="66" selection-start-line="24" selection-start-column="66" selection-end-line="24" selection-end-column="66" />
-        </state>
+      <provider editor-type-id="android-manifest">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
@@ -2829,13 +2741,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/BaseApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -2854,25 +2759,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/activities/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/utils/GsonUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="51" column="81" selection-start-line="51" selection-start-column="81" selection-end-line="51" selection-end-column="81" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/fragments/SecondFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="770">
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#1407#1408#0" expanded="false" />
-            <element signature="e#1452#1453#0" expanded="false" />
-            <element signature="e#1820#1821#0" expanded="false" />
-            <element signature="e#1880#1881#0" expanded="false" />
-            <element signature="e#2377#2378#0" expanded="false" />
-            <element signature="e#2409#2410#0" expanded="false" />
+            <element signature="e#1296#1297#0" expanded="false" />
+            <element signature="e#1343#1344#0" expanded="false" />
+            <element signature="e#1619#1620#0" expanded="false" />
+            <element signature="e#1682#1683#0" expanded="false" />
+            <element signature="e#2074#2075#0" expanded="false" />
+            <element signature="e#2136#2137#0" expanded="false" />
+            <element signature="e#2190#2191#0" expanded="false" />
+            <element signature="e#2259#2260#0" expanded="false" />
+            <element signature="e#2318#2319#0" expanded="false" />
+            <element signature="e#2380#2381#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/api/request/BaseRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/utils/SharedPrefUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2244">
+        <state relative-caret-position="22">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
@@ -2885,29 +2808,187 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/fragments/FirstFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/utils/FileUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1210">
-          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1832#1833#0" expanded="false" />
-            <element signature="e#1878#1879#0" expanded="false" />
-            <element signature="e#2492#2493#0" expanded="false" />
-            <element signature="e#2556#2557#0" expanded="false" />
-            <element signature="e#4738#4739#0" expanded="false" />
-            <element signature="e#4807#4808#0" expanded="false" />
-            <element signature="e#4866#4867#0" expanded="false" />
-            <element signature="e#4896#4897#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="-1100">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/fragments/SecondFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/utils/DebugLog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+        <state relative-caret-position="1790">
+          <caret line="134" column="28" selection-start-line="134" selection-start-column="28" selection-end-line="134" selection-end-column="28" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/utils/DialogUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="24" column="66" selection-start-line="24" selection-start-column="66" selection-end-line="24" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/utils/FragmentUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/activities/TestActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/callback/OnFillBackgroundListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/activities/BaseActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2728">
+          <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/model/Event.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/utils/EventBusHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/utils/KeyboardUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/utils/LayoutUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/utils/Logger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/utils/UiUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_first.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="24" column="38" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/model/UserInfoBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-308">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/AccountManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/BaseApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="770">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/fragments/BaseFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/activities/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1232">
+          <caret line="82" column="71" selection-start-line="82" selection-start-column="71" selection-end-line="82" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/fragments/FirstFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/baseapp/hiepnn/mybaseproject/fragments/TestFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#928#929#0" expanded="true" />
+            <element signature="e#958#959#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

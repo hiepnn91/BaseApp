@@ -3,6 +3,7 @@ package com.baseapp.hiepnn.mybaseproject.api.request;
 import com.baseapp.hiepnn.mybaseproject.api.volley.callback.ApiObjectCallBack;
 import com.baseapp.hiepnn.mybaseproject.constant.ApiConstant;
 import com.baseapp.hiepnn.mybaseproject.utils.DebugLog;
+import com.baseapp.hiepnn.mybaseproject.utils.GsonUtils;
 import com.google.gson.Gson;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
@@ -29,7 +30,7 @@ public abstract class BaseRequest<T> {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 DebugLog.jsonFormat("response", response);
-                mApiObjectCallBack.onSuccess(new Gson().fromJson(response.toString(), getResponseClass()));
+                mApiObjectCallBack.onSuccess(GsonUtils.fromJson(response.toString(), getResponseClass()));
             }
 
             @Override

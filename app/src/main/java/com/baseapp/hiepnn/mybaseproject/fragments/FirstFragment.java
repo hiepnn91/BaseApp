@@ -75,7 +75,6 @@ public class FirstFragment extends BaseFragment {
 
     @Override
     protected void initData() {
-
     }
 
     public void callLogin() throws JSONException {
