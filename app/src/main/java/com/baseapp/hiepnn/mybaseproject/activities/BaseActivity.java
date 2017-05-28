@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 
+import com.akexorcist.localizationactivity.LocalizationActivity;
 import com.baseapp.hiepnn.mybaseproject.R;
 import com.baseapp.hiepnn.mybaseproject.api.volley.event.ApiEvent;
 import com.baseapp.hiepnn.mybaseproject.model.Event;
@@ -24,7 +25,7 @@ import butterknife.ButterKnife;
 /**
  * Created by Envy 15T on 6/4/2015.
  */
-public abstract class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends LocalizationActivity {
 
     AlertDialog dialogErrorAPI;
     AlertDialog dialogTimeOutAPI;
@@ -34,7 +35,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     private Event eventBaseActivity;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         onPreSetContentView(savedInstanceState);
         super.onCreate(savedInstanceState);
@@ -138,7 +139,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onResume() {
+    public void onResume() {
         super.onResume();
         if (isUnregistEventBus) {
             EventBusHelper.register(this);

@@ -50,4 +50,5 @@ dependencies {
     }
     compile 'org.apache.httpcomponents:httpclient-android:4.3.5'
     compile 'com.loopj.android:android-async-http:1.4.6'
+    compile 'com.akexorcist:localizationactivity:1.1.2'
 }
