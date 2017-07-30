@@ -3,9 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.baseapp.hiepnn.mybaseproject.fragments.FirstFragment"
-    tools:showIn="@layout/activity_main">
+    tools:context="com.baseapp.hiepnn.mybaseproject.fragments.FirstFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
