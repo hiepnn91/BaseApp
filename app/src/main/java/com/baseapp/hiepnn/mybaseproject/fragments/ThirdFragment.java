@@ -74,6 +74,26 @@ public class ThirdFragment extends BaseFragment {
         setupTabIcons();
     }
 
+    @Override
+    protected void onRestore() {
+
+    }
+
+    @Override
+    protected void initialize() {
+
+    }
+
+    @Override
+    protected void onSaveState(Bundle bundle) {
+
+    }
+
+    @Override
+    protected void onRestoreState(Bundle bundle) {
+
+    }
+
     /**
      * Adding custom view to tab
      */

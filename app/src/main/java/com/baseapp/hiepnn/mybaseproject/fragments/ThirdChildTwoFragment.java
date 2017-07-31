@@ -33,6 +33,26 @@ public class ThirdChildTwoFragment extends BaseFragment {
 
     }
 
+    @Override
+    protected void onRestore() {
+
+    }
+
+    @Override
+    protected void initialize() {
+
+    }
+
+    @Override
+    protected void onSaveState(Bundle bundle) {
+
+    }
+
+    @Override
+    protected void onRestoreState(Bundle bundle) {
+
+    }
+
 //    @Override
 //    protected void processCustomToolbar() {
 //        FragmentUtil.popBackStack(this);

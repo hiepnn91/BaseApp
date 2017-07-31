@@ -59,6 +59,26 @@ public class SecondFragment extends BaseFragment {
         getEventBaseFragment().doFillBackground("SecondFragment");
     }
 
+    @Override
+    protected void onRestore() {
+
+    }
+
+    @Override
+    protected void initialize() {
+
+    }
+
+    @Override
+    protected void onSaveState(Bundle bundle) {
+
+    }
+
+    @Override
+    protected void onRestoreState(Bundle bundle) {
+
+    }
+
 
     @OnClick(R.id.btnFrgThird)
     void onClickFrgThird() {
@@ -68,7 +88,8 @@ public class SecondFragment extends BaseFragment {
 
     @Override
     protected void processOnBackPress() {
-        FragmentUtil.popBackStack(SecondFragment.this);
+        FragmentUtil.popEntireFragmentBackStack(SecondFragment.this);
+        FragmentUtil.pushFragment(getActivity(), new FirstFragment().newInstance("Bacl to second"), null);
     }
 
     @Override
@@ -78,7 +99,8 @@ public class SecondFragment extends BaseFragment {
 
     @Override
     protected void processCustomToolbar() {
-        FragmentUtil.popBackStack(SecondFragment.this);
+        FragmentUtil.popEntireFragmentBackStack(SecondFragment.this);
+        FragmentUtil.pushFragment(getActivity(), new FirstFragment().newInstance("Bacl to second"), null);
     }
 
     @Override

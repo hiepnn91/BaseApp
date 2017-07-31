@@ -90,6 +90,26 @@ public class ListUserFragment extends BaseFragment implements ListUserView, View
     }
 
     @Override
+    protected void onRestore() {
+
+    }
+
+    @Override
+    protected void initialize() {
+
+    }
+
+    @Override
+    protected void onSaveState(Bundle bundle) {
+
+    }
+
+    @Override
+    protected void onRestoreState(Bundle bundle) {
+
+    }
+
+    @Override
     protected void processOnBackPress() {
 
     }

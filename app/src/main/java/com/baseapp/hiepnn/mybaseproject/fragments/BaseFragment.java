@@ -44,7 +44,8 @@ import butterknife.Optional;
 public abstract class BaseFragment extends Fragment {
     private static ProgressDialog progressDlg;
     protected View rootView;
-
+    protected static final String PARAM_BUNDLE = "PARAM_BUNDLE";
+    private Bundle savedState;
     protected ViewGroup fragmentViewParent;
     BaseActivity baseActivity;
 
@@ -107,17 +108,15 @@ public abstract class BaseFragment extends Fragment {
         return createRootView(inflater, container);
     }
 
-//    private void handleHeaderCallback(FragmentActivity activity, @NonNull Fragment fragment) {
-//        if (!isDisableOnHeaderIconClickListenerAttach()) {
-//            if (activity instanceof MainActivity) {
-//                if (fragment instanceof OnHeaderIconClickListener) {
-//                    ((MainActivity) activity).setOnHeaderIconClickListener((OnHeaderIconClickListener) fragment);
-//                } else {
-//                    ((MainActivity) activity).setOnHeaderIconClickListener(null);
-//                }
-//            }
-//        }
-//    }
+    @Override
+    public void onActivityCreated(Bundle bundle) {
+        super.onActivityCreated(bundle);
+        if (!restoreStateFromArguments()) {
+            initialize();
+        } else {
+            onRestore();
+        }
+    }
 
     protected boolean isDisableOnHeaderIconClickListenerAttach() {
         return false;
@@ -213,6 +212,7 @@ public abstract class BaseFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         ButterKnife.reset(this);
+        saveStateToArguments();
         KeyboardUtil.hideSoftKeyboard(getActivity());
         if (isCancelRequestOnDestroyView()) {
             NetworkUtils.getInstance(BaseApplication.getInstance()).cancelNormalRequest();
@@ -227,6 +227,56 @@ public abstract class BaseFragment extends Fragment {
     abstract protected void getArgument(Bundle bundle);
 
     abstract protected void initData();
+
+    protected abstract void onRestore();
+
+    protected abstract void initialize();
+
+    protected abstract void onSaveState(Bundle bundle);
+
+    protected abstract void onRestoreState(Bundle bundle);
+
+    @Override
+    public void onSaveInstanceState(Bundle bundle) {
+        saveStateToArguments();
+        super.onSaveInstanceState(bundle);
+    }
+
+    private void saveStateToArguments() {
+        if (getView() != null)
+            savedState = saveState();
+        if (savedState != null) {
+            Bundle bundle = getArguments();
+            if (bundle != null) {
+                bundle.putBundle(PARAM_BUNDLE, savedState);
+            }
+        }
+    }
+
+    private boolean restoreStateFromArguments() {
+        Bundle bundle = getArguments();
+        if (bundle == null) {
+            return false;
+        }
+        savedState = bundle.getBundle(PARAM_BUNDLE);
+        if (savedState == null) {
+            return false;
+        }
+        restoreState();
+        return true;
+    }
+
+    private void restoreState() {
+        if (savedState != null) {
+            onRestoreState(savedState);
+        }
+    }
+
+    private Bundle saveState() {
+        Bundle state = new Bundle();
+        onSaveState(state);
+        return state;
+    }
 
     protected void onBackPressFragment(View view) {
         view.setFocusableInTouchMode(true);
@@ -356,14 +406,6 @@ public abstract class BaseFragment extends Fragment {
             return false;
         }
     }
-
-//    protected void setHeaderCallback(OnHeaderIconClickListener onHeaderIconClickListener) {
-//        if (getActivity() instanceof MainActivity) {
-//            ((MainActivity) getActivity()).setOnHeaderIconClickListener(onHeaderIconClickListener);
-//        } else {
-//            throw new ClassCastException("Current activity is not MainActivity!");
-//        }
-//    }
 
     public void hideKeyBoardWhenTouchOutside(ViewGroup viewGroup) {
         if (viewGroup != null) {

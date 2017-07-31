@@ -53,11 +53,12 @@ public class FirstFragment extends BaseFragment {
 
     @Override
     protected void initView(View root, LayoutInflater inflater, ViewGroup container) {
-        getEventBaseFragment().doFillBackground(mNameFragment);
+        DebugLog.showLogCat(mNameFragment);
         setCustomToolbar(true);
         btnFrgSec.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 try {
                     callLogin();
                 } catch (JSONException e) {
@@ -75,6 +76,31 @@ public class FirstFragment extends BaseFragment {
 
     @Override
     protected void initData() {
+    }
+
+    @Override
+    protected void onRestore() {
+        getEventBaseFragment().doFillBackground(mNameFragment);
+        DebugLog.showLogCat(mNameFragment);
+    }
+
+    @Override
+    protected void initialize() {
+        getEventBaseFragment().doFillBackground(mNameFragment);
+        DebugLog.showLogCat(mNameFragment);
+    }
+
+    @Override
+    protected void onSaveState(Bundle bundle) {
+//        bundle.putString("nameFragment", "Test");
+        mNameFragment = bundle.getString("nameFragment");
+        DebugLog.showLogCat(mNameFragment);
+    }
+
+    @Override
+    protected void onRestoreState(Bundle bundle) {
+        mNameFragment = bundle.getString("nameFragment");
+        DebugLog.showLogCat(mNameFragment);
     }
 
     public void callLogin() throws JSONException {

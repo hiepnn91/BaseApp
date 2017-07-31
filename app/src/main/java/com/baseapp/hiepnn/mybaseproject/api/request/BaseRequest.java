@@ -29,24 +29,24 @@ public abstract class BaseRequest<T> {
         mJsonHttpResponseHandler = new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                DebugLog.jsonFormat("response", response);
+//                DebugLog.jsonFormat("response", response);
                 mApiObjectCallBack.onSuccess(GsonUtils.fromJson(response.toString(), getResponseClass()));
             }
 
             @Override
             public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
                 super.onFailure(statusCode, headers, throwable, errorResponse);
-                DebugLog.showLogCat(throwable.getMessage());
+//                DebugLog.showLogCat(throwable.getMessage());
                 mApiObjectCallBack.onFail(statusCode, throwable.getMessage());
             }
 
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
-                DebugLog.showLogCat(responseString);
+//                DebugLog.showLogCat(responseString);
                 mApiObjectCallBack.onFail(statusCode, responseString);
             }
         };
-        DebugLog.showLogCat(getAbsoluteUrl() + "\n" + putParams());
+//        DebugLog.showLogCat(getAbsoluteUrl() + "\n" + putParams());
         if (getMethod() == ApiConstant.POST) {
             client.post(getAbsoluteUrl(), putParams(), mJsonHttpResponseHandler);
         } else {
