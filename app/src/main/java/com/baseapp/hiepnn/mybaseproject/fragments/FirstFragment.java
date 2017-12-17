@@ -1,7 +1,12 @@
 package com.baseapp.hiepnn.mybaseproject.fragments;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.telephony.SmsManager;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -30,6 +35,7 @@ import org.json.JSONException;
 import java.util.ArrayList;
 
 import butterknife.InjectView;
+import io.reactivex.Observable;
 
 public class FirstFragment extends BaseFragment {
     @InjectView(R.id.btnFrgSec)
@@ -58,12 +64,35 @@ public class FirstFragment extends BaseFragment {
         btnFrgSec.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 try {
-                    callLogin();
-                } catch (JSONException e) {
+                    if (ContextCompat.checkSelfPermission(getActivity(),
+                            Manifest.permission.SEND_SMS)
+                            != PackageManager.PERMISSION_GRANTED) {
+                        if (ActivityCompat.shouldShowRequestPermissionRationale(getActivity(),
+                                Manifest.permission.SEND_SMS)) {
+                        } else {
+                            ActivityCompat.requestPermissions(getActivity(),
+                                    new String[]{Manifest.permission.SEND_SMS},
+                                    1);
+                        }
+                    } else {         //already has permission granted
+                        SmsManager smsManager = SmsManager.getDefault();
+                        smsManager.sendTextMessage("01682253221", null, "Test", null, null);
+                        Toast.makeText(getActivity(), "SMS sent.",
+                                Toast.LENGTH_LONG).show();
+
+                    }
+                } catch (Exception e) {
+                    Toast.makeText(getActivity(),
+                            "Sending SMS failed.",
+                            Toast.LENGTH_LONG).show();
                     e.printStackTrace();
                 }
+//                try {
+//                    callLogin();
+//                } catch (JSONException e) {
+//                    e.printStackTrace();
+//                }
             }
         });
         setHasOptionsMenu(true);
@@ -92,9 +121,8 @@ public class FirstFragment extends BaseFragment {
 
     @Override
     protected void onSaveState(Bundle bundle) {
-//        bundle.putString("nameFragment", "Test");
-        mNameFragment = bundle.getString("nameFragment");
-        DebugLog.showLogCat(mNameFragment);
+        bundle.putString("nameFragment", "Test");
+//        mNameFragment = bundle.getString("nameFragment");
     }
 
     @Override
@@ -159,6 +187,25 @@ public class FirstFragment extends BaseFragment {
     @Override
     protected void processCustomToolbar() {
         loadMenuLeft();
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case 1: {
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    SmsManager smsManager = SmsManager.getDefault();
+                    smsManager.sendTextMessage("01682253221", null, "Test", null, null);
+                    Toast.makeText(getActivity(), "SMS sent.",
+                            Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(getActivity(),
+                            "SMS faild, please try again.", Toast.LENGTH_LONG).show();
+                    return;
+                }
+            }
+        }
     }
 
     @Override

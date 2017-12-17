@@ -88,8 +88,7 @@ public class SecondFragment extends BaseFragment {
 
     @Override
     protected void processOnBackPress() {
-        FragmentUtil.popEntireFragmentBackStack(SecondFragment.this);
-        FragmentUtil.pushFragment(getActivity(), new FirstFragment().newInstance("Bacl to second"), null);
+        FragmentUtil.popBackStack(this);
     }
 
     @Override
@@ -99,8 +98,7 @@ public class SecondFragment extends BaseFragment {
 
     @Override
     protected void processCustomToolbar() {
-        FragmentUtil.popEntireFragmentBackStack(SecondFragment.this);
-        FragmentUtil.pushFragment(getActivity(), new FirstFragment().newInstance("Bacl to second"), null);
+        FragmentUtil.popBackStack(this);
     }
 
     @Override
