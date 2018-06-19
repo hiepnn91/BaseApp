@@ -41,7 +41,7 @@ public class FragmentUtil {
         }
 
         fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-        fragmentTransaction.commitAllowingStateLoss();
+        fragmentTransaction.commit();
     }
 
     public static void popBackStack(Fragment fragment) {

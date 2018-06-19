@@ -4,10 +4,8 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
@@ -24,13 +22,11 @@ import com.baseapp.hiepnn.mybaseproject.R;
 import com.baseapp.hiepnn.mybaseproject.activities.BaseActivity;
 import com.baseapp.hiepnn.mybaseproject.activities.MainActivity;
 import com.baseapp.hiepnn.mybaseproject.api.request.BaseRequest;
-import com.baseapp.hiepnn.mybaseproject.callback.OnHeaderIconClickListener;
 import com.baseapp.hiepnn.mybaseproject.model.Event;
 import com.baseapp.hiepnn.mybaseproject.utils.DebugLog;
 import com.baseapp.hiepnn.mybaseproject.utils.KeyboardUtil;
 import com.baseapp.hiepnn.mybaseproject.utils.NetworkUtils;
 import com.baseapp.hiepnn.mybaseproject.utils.UiUtil;
-
 
 import java.util.ArrayList;
 

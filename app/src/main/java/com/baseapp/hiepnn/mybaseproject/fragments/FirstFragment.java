@@ -1,11 +1,8 @@
 package com.baseapp.hiepnn.mybaseproject.fragments;
 
-import android.Manifest;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.telephony.SmsManager;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -27,7 +24,6 @@ import com.baseapp.hiepnn.mybaseproject.constant.AppConstant;
 import com.baseapp.hiepnn.mybaseproject.utils.DebugLog;
 import com.baseapp.hiepnn.mybaseproject.utils.DialogUtil;
 import com.baseapp.hiepnn.mybaseproject.utils.FragmentUtil;
-import com.baseapp.hiepnn.mybaseproject.utils.SharedPrefUtils;
 import com.baseapp.hiepnn.mybaseproject.utils.SharedPrefsUtils;
 
 import org.json.JSONException;
@@ -35,7 +31,6 @@ import org.json.JSONException;
 import java.util.ArrayList;
 
 import butterknife.InjectView;
-import io.reactivex.Observable;
 
 public class FirstFragment extends BaseFragment {
     @InjectView(R.id.btnFrgSec)
@@ -64,35 +59,8 @@ public class FirstFragment extends BaseFragment {
         btnFrgSec.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try {
-                    if (ContextCompat.checkSelfPermission(getActivity(),
-                            Manifest.permission.SEND_SMS)
-                            != PackageManager.PERMISSION_GRANTED) {
-                        if (ActivityCompat.shouldShowRequestPermissionRationale(getActivity(),
-                                Manifest.permission.SEND_SMS)) {
-                        } else {
-                            ActivityCompat.requestPermissions(getActivity(),
-                                    new String[]{Manifest.permission.SEND_SMS},
-                                    1);
-                        }
-                    } else {         //already has permission granted
-                        SmsManager smsManager = SmsManager.getDefault();
-                        smsManager.sendTextMessage("01682253221", null, "Test", null, null);
-                        Toast.makeText(getActivity(), "SMS sent.",
-                                Toast.LENGTH_LONG).show();
-
-                    }
-                } catch (Exception e) {
-                    Toast.makeText(getActivity(),
-                            "Sending SMS failed.",
-                            Toast.LENGTH_LONG).show();
-                    e.printStackTrace();
-                }
-//                try {
-//                    callLogin();
-//                } catch (JSONException e) {
-//                    e.printStackTrace();
-//                }
+                DebugLog.showLogCat("SecondFragment");
+                FragmentUtil.pushFragment(getActivity(), new SecondFragment().newInstance("SecondFragment"), null);
             }
         });
         setHasOptionsMenu(true);
@@ -154,6 +122,7 @@ public class FirstFragment extends BaseFragment {
                         public void onFail(int failCode, String message) {
                             hideCoverNetworkLoading();
                             DialogUtil.showDialog(getActivity(), "Thông báo", message);
+                            DebugLog.showLogCat("hey");
                         }
                     });
                 }

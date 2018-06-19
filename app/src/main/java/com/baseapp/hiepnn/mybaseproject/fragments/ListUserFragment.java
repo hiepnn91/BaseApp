@@ -22,6 +22,7 @@ import com.baseapp.hiepnn.mybaseproject.adapter.ListUserAdapter;
 import com.baseapp.hiepnn.mybaseproject.api.request.ListUserHelper;
 import com.baseapp.hiepnn.mybaseproject.model.User;
 import com.baseapp.hiepnn.mybaseproject.presenter.ListUserPresenter;
+import com.baseapp.hiepnn.mybaseproject.utils.DebugLog;
 import com.baseapp.hiepnn.mybaseproject.view.ListUserView;
 
 import java.util.ArrayList;
@@ -74,14 +75,13 @@ public class ListUserFragment extends BaseFragment implements ListUserView, View
             listUser = new ArrayList<>();
         }
         if (presenter == null) {
-            Log.d("PJ3", "Presenter Null");
             if (listUserHelper == null)
                 listUserHelper = new ListUserHelper(url);
             listUserHelper.setList(listUser);
             presenter = new ListUserPresenter(this, listUserHelper);
+            presenter.getData(false);
         }
-        if (presenter != null) presenter.getData(true); // Use cache
-        else presenter.getData(false);
+        else presenter.getData(true); // Use cache
     }
 
     @Override
