@@ -21,6 +21,7 @@ public class ThirdChildTwoFragment extends BaseFragment {
 
     @Override
     protected void initView(View root, LayoutInflater inflater, ViewGroup container) {
+//        setCustomToolbar(false);
     }
 
     @Override
@@ -53,18 +54,18 @@ public class ThirdChildTwoFragment extends BaseFragment {
 
     }
 
-//    @Override
-//    protected void processCustomToolbar() {
-//        FragmentUtil.popBackStack(this);
-//    }
-//
-//    @Override
-//    protected void processOnBackPress() {
-//        FragmentUtil.popBackStack(this);
-//    }
-//
-//    @Override
-//    protected Drawable getIconLeft() {
-//        return getResources().getDrawable(R.drawable.ic_back);
-//    }
+    @Override
+    protected void processCustomToolbar() {
+        FragmentUtil.popBackStack(this);
+    }
+
+    @Override
+    protected void processOnBackPress() {
+        FragmentUtil.popBackStack(this);
+    }
+
+    @Override
+    protected Drawable getIconLeft() {
+        return getResources().getDrawable(R.drawable.ic_dm02);
+    }
 }
