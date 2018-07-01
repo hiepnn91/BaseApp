@@ -1,5 +1,6 @@
 package com.baseapp.hiepnn.mybaseproject.fragments;
 
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.baseapp.hiepnn.mybaseproject.R;
+import com.baseapp.hiepnn.mybaseproject.activities.TestActivity;
 import com.baseapp.hiepnn.mybaseproject.api.request.BaseRequest;
 import com.baseapp.hiepnn.mybaseproject.api.request.GetNewListByPlace;
 import com.baseapp.hiepnn.mybaseproject.api.request.LoginRequest;
@@ -60,7 +62,9 @@ public class FirstFragment extends BaseFragment {
             @Override
             public void onClick(View v) {
                 DebugLog.showLogCat("SecondFragment");
-                FragmentUtil.pushFragment(getActivity(), new SecondFragment().newInstance("SecondFragment"), null);
+                Toast.makeText(baseActivity,"Firs",Toast.LENGTH_SHORT).show();
+//                startActivity(new Intent(baseActivity, TestActivity.class));
+                FragmentUtil.pushFragment(baseActivity, new SecondFragment().newInstance("SecondFragment"), null);
             }
         });
         setHasOptionsMenu(true);

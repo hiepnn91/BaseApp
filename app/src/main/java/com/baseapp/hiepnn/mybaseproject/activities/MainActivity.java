@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.baseapp.hiepnn.mybaseproject.R;
 import com.baseapp.hiepnn.mybaseproject.callback.OnFillBackgroundListener;
@@ -44,8 +45,9 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                 tvAppName.setText(nameTable);
             }
         });
-//        FragmentUtil.replaceFragment(MainActivity.this, new FirstFragment().newInstance("FirstFragment"), null);
-        FragmentUtil.replaceFragment(MainActivity.this, new ListUserFragment(), null);
+//        Toast.makeText(baseActivity,"Main",Toast.LENGTH_SHORT).show();
+        FragmentUtil.replaceFragment(this, new FirstFragment().newInstance("FirstFragment"), null);
+//        FragmentUtil.replaceFragment(MainActivity.this, new ListUserFragment(), null);
         toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();

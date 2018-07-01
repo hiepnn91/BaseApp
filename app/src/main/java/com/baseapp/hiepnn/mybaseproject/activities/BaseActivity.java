@@ -30,7 +30,7 @@ public abstract class BaseActivity extends LocalizationActivity {
     AlertDialog dialogErrorAPI;
     AlertDialog dialogTimeOutAPI;
     AlertDialog dialogNoConnection;
-
+    BaseActivity baseActivity;
     boolean isUnregistEventBus = false;
     private Event eventBaseActivity;
 
@@ -39,6 +39,7 @@ public abstract class BaseActivity extends LocalizationActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         onPreSetContentView(savedInstanceState);
         super.onCreate(savedInstanceState);
+        baseActivity = this;
         Intent intent = getIntent();
         String action = intent.getAction();
         if (Intent.ACTION_VIEW.equals(action)) {

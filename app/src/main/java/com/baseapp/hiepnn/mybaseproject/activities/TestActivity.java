@@ -1,5 +1,7 @@
 package com.baseapp.hiepnn.mybaseproject.activities;
 
+import android.widget.Toast;
+
 import com.baseapp.hiepnn.mybaseproject.R;
 
 /**
@@ -9,12 +11,12 @@ import com.baseapp.hiepnn.mybaseproject.R;
 public class TestActivity extends BaseActivity {
     @Override
     public int setContentViewId() {
-        return R.layout.activity_main;
+        return R.layout.fragment_third_child;
     }
 
     @Override
     public void initView() {
-
+        Toast.makeText(baseActivity,"Test",Toast.LENGTH_SHORT).show();
     }
 
     @Override

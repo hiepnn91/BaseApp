@@ -1,6 +1,7 @@
 package com.baseapp.hiepnn.mybaseproject.fragments;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -93,6 +94,14 @@ public abstract class BaseFragment extends Fragment {
 
     public TextView getTvEmpty() {
         return tvEmpty;
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        baseActivity = baseActivity;
+        if (context instanceof BaseActivity)
+            baseActivity = (BaseActivity) context;
     }
 
     @Nullable
@@ -306,7 +315,7 @@ public abstract class BaseFragment extends Fragment {
                         if (getFragmentManager().getBackStackEntryCount() > 0) {
                             processCustomToolbar();
                         } else {
-//                        loadMenuLeft();
+                            loadMenuLeft();
                         }
                     }
                 });
