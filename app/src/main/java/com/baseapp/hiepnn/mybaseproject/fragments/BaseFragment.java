@@ -33,7 +33,6 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.Optional;
 
 /**
  * Created by Envy 15T on 6/4/2015.
