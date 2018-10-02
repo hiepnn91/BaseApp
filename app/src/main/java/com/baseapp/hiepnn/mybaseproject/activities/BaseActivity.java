@@ -46,7 +46,7 @@ public abstract class BaseActivity extends LocalizationActivity {
             handleDeepLinkData(intent.getData());
         }
         setContentView(setContentViewId());
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         EventBusHelper.register(this);
         isUnregistEventBus = false;
         eventBaseActivity = new Event();

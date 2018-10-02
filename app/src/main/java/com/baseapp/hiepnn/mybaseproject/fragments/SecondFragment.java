@@ -19,13 +19,13 @@ import com.baseapp.hiepnn.mybaseproject.utils.DebugLog;
 import com.baseapp.hiepnn.mybaseproject.utils.FragmentUtil;
 import com.baseapp.hiepnn.mybaseproject.utils.SharedPrefsUtils;
 
-import butterknife.InjectView;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 public class SecondFragment extends BaseFragment {
-    @InjectView(R.id.btnFrgThird)
+    @BindView(R.id.btnFrgThird)
     Button btnFrgThird;
-    @InjectView(R.id.tv_hello)
+    @BindView(R.id.tv_hello)
     TextView tv_hello;
     String nameFragment;
 

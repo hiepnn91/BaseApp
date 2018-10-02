@@ -8,24 +8,23 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.baseapp.hiepnn.mybaseproject.R;
 import com.baseapp.hiepnn.mybaseproject.callback.OnFillBackgroundListener;
 import com.baseapp.hiepnn.mybaseproject.fragments.FirstFragment;
-import com.baseapp.hiepnn.mybaseproject.fragments.ListUserFragment;
+import com.baseapp.hiepnn.mybaseproject.utils.DebugLog;
 import com.baseapp.hiepnn.mybaseproject.utils.FragmentUtil;
 
-import butterknife.InjectView;
+import butterknife.BindView;
 
 public class MainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
-    @InjectView(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar toolbar;
-    @InjectView(R.id.tvAppName)
+    @BindView(R.id.tvAppName)
     TextView tvAppName;
-    @InjectView(R.id.nav_view)
+    @BindView(R.id.nav_view)
     public NavigationView navigationView;
-    @InjectView(R.id.drawer_layout)
+    @BindView(R.id.drawer_layout)
     public DrawerLayout drawer;
     public ActionBarDrawerToggle toggle;
 
@@ -56,7 +55,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
     @Override
     public void initData() {
-
+        DebugLog.showLogCat("hello");
     }
 
     @Override

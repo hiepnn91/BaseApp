@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.akexorcist:localizationactivity-1.1.2">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/15662982e10f90671b0de13280e8594eebef20b7/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/15662982e10f90671b0de13280e8594eebef20b7/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.akexorcist/localizationactivity/1.1.2/eeca6784aed1f6053ba1b3b42e1a58c83d8c6f49/localizationactivity-1.1.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

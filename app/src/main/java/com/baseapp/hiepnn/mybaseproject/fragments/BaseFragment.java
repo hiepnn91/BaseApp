@@ -31,8 +31,8 @@ import com.baseapp.hiepnn.mybaseproject.utils.UiUtil;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.Optional;
 
 /**
@@ -46,28 +46,22 @@ public abstract class BaseFragment extends Fragment {
     protected ViewGroup fragmentViewParent;
     BaseActivity baseActivity;
 
-    @Optional
-    @InjectView(R.id.initialProgressBar)
+    @BindView(R.id.initialProgressBar)
     View initialProgressBar;
 
-    @Optional
-    @InjectView(R.id.initialNetworkError)
+    @BindView(R.id.initialNetworkError)
     View initialNetworkError;
 
-    @Optional
-    @InjectView(R.id.initialEmptyList)
+    @BindView(R.id.initialEmptyList)
     View initialEmptyList;
 
-    @Optional
-    @InjectView(R.id.coverNetworkLoading)
+    @BindView(R.id.coverNetworkLoading)
     View coverNetworkLoading;
 
-    @Optional
-    @InjectView(R.id.common_layout)
+    @BindView(R.id.common_layout)
     LinearLayout linearLayoutEmpty;
 
-    @Optional
-    @InjectView(R.id.common_txt_empty)
+    @BindView(R.id.common_txt_empty)
     TextView tvEmpty;
     LayoutInflater mInflater;
     ViewGroup mContainer;
@@ -132,12 +126,12 @@ public abstract class BaseFragment extends Fragment {
         mContainer = container;
         if (isSkipGenerateBaseLayout()) {
             rootView = inflater.inflate(getLayoutId(), container, false);
-            ButterKnife.inject(this, rootView);
+            ButterKnife.bind(rootView);
         } else {
             rootView = inflater.inflate(R.layout.layout_base_fragment, container, false);
             fragmentViewParent = (ViewGroup) rootView.findViewById(R.id.fragmentViewParent);
             fragmentViewParent.addView(inflater.inflate(getLayoutId(), container, false));
-            ButterKnife.inject(this, rootView);
+            ButterKnife.bind(this, rootView);
             bypassCommonNetworkLoadingIfNecessary();
         }
         return rootView;
@@ -216,7 +210,6 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        ButterKnife.reset(this);
         saveStateToArguments();
         KeyboardUtil.hideSoftKeyboard(getActivity());
         if (isCancelRequestOnDestroyView()) {
