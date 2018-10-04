@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +17,6 @@ import com.baseapp.hiepnn.mybaseproject.utils.DebugLog;
 import com.baseapp.hiepnn.mybaseproject.utils.DialogUtil;
 import com.baseapp.hiepnn.mybaseproject.utils.EventBusHelper;
 import com.baseapp.hiepnn.mybaseproject.utils.KeyboardUtil;
-
 
 import butterknife.ButterKnife;
 

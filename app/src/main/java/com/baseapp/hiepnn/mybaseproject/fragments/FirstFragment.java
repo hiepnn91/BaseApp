@@ -61,7 +61,7 @@ public class FirstFragment extends BaseFragment {
             @Override
             public void onClick(View v) {
                 DebugLog.showLogCat("SecondFragment");
-                Toast.makeText(baseActivity,"Firs",Toast.LENGTH_SHORT).show();
+                Toast.makeText(baseActivity, "First", Toast.LENGTH_SHORT).show();
                 FragmentUtil.pushFragment(baseActivity, new SecondFragment().newInstance("SecondFragment"), null);
             }
         });

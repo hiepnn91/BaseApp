@@ -2,7 +2,6 @@ package com.baseapp.hiepnn.mybaseproject.fragments;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -14,10 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.baseapp.hiepnn.mybaseproject.R;
-import com.baseapp.hiepnn.mybaseproject.constant.AppConstant;
-import com.baseapp.hiepnn.mybaseproject.utils.DebugLog;
 import com.baseapp.hiepnn.mybaseproject.utils.FragmentUtil;
-import com.baseapp.hiepnn.mybaseproject.utils.SharedPrefsUtils;
 
 import butterknife.BindView;
 import butterknife.OnClick;
