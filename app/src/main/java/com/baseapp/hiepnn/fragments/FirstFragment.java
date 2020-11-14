@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.os.Vibrator;
 import android.telephony.SmsManager;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -40,8 +39,6 @@ import org.json.JSONException;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import butterknife.BindView;
 
 
 public class FirstFragment extends BaseFragment {
