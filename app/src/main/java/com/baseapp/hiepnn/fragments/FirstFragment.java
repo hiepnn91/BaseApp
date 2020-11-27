@@ -99,15 +99,16 @@ public class FirstFragment extends BaseFragment {
 
             @Override
             public void onClick(View v) {
-                if (isShow) {
-                    adapter.isCheckBoxVisible = false;
-                    lv.setAdapter(adapter);
-                    isShow = false;
-                } else {
-                    adapter.isCheckBoxVisible = true;
-                    lv.setAdapter(adapter);
-                    isShow = true;
-                }
+//                if (isShow) {
+//                    adapter.isCheckBoxVisible = false;
+//                    lv.setAdapter(adapter);
+//                    isShow = false;
+//                } else {
+//                    adapter.isCheckBoxVisible = true;
+//                    lv.setAdapter(adapter);
+//                    isShow = true;
+//                }
+                FragmentUtil.pushFragment(getActivity(), new SecondFragment(), null);
 //                RowItem r;
 //                for (int i = 0; i < lv.getCount(); i++) {
 //                    r = (RowItem) lv.getAdapter().getItem(i);
@@ -212,7 +213,7 @@ public class FirstFragment extends BaseFragment {
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         switch (requestCode) {
             case 1: {
                 if (grantResults.length > 0
